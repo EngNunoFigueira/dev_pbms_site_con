@@ -1,0 +1,146 @@
+﻿@model PBMS_beta3A.Model.CrearFichaDeCliente
+
+@{
+    ViewBag.Title = "RegistoDeClientes";
+}
+
+<h2>RegistoDeClientes</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>CrearFichaDeCliente</legend>
+
+          <div class="editor-label">
+            <!--@Html.LabelFor(model => model.Id_Referencia)-->
+        </div>
+        <div class="editor-field">
+            <!--@Html.EditorFor(model => model.Id_Referencia))-->
+            <!--@Html.ValidationMessageFor(model => model.Id_Referencia))-->
+
+           <select id="Id_Referencia" name="Id_Referencia"><option value="">-- Tipo de Cliente--</option>
+           <option value="4">  Particular </option>
+           <option value="5">  Empresa    </option>
+           </select>
+        </div>
+        <br />
+        <div class="editor-label">
+             Nome 
+           <!-- @Html.LabelFor(model => model.Nome)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nome)
+            @Html.ValidationMessageFor(model => model.Nome)
+        </div>
+
+        <div class="editor-label">
+            Apelido 
+           <!-- @Html.LabelFor(model => model.Apelido)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Apelido)
+            @Html.ValidationMessageFor(model => model.Apelido)
+        </div>
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.Id_Contacto)-->
+        </div>
+        <div class="editor-field">
+            <!-- @Html.EditorFor(model => model.Id_Contacto)-->
+            <!--@Html.ValidationMessageFor(model => model.Id_Contacto)-->
+        </div>
+        <div class="editor-label">
+                Email
+          <!--  @Html.LabelFor(model => model.Contacto_Email)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Contacto_Email)
+            @Html.ValidationMessageFor(model => model.Contacto_Email)
+        </div>
+        <div class="editor-label">
+               Telefone
+           <!-- @Html.LabelFor(model => model.Contacto_Telefone)-->
+        </div>
+        <div class="editor-field">
+             @Html.EditorFor(model => model.Contacto_Telefone)
+            @Html.ValidationMessageFor(model => model.Contacto_Telefone)
+        </div>
+
+        <div class="editor-label">
+              Telemovel
+           <!-- @Html.LabelFor(model => model.Contacto_Telemovel)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Contacto_Telemovel)
+            @Html.ValidationMessageFor(model => model.Contacto_Telemovel)
+        </div>
+
+        <div class="editor-label">
+             Página web/ URL
+           <!-- @Html.LabelFor(model => model.Contacto_URL)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Contacto_URL)
+            @Html.ValidationMessageFor(model => model.Contacto_URL)
+        </div>
+
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.Morada_Bairro)-->
+        </div>
+        <div class="editor-field">
+           <!-- @Html.EditorFor(model => model.Morada_Bairro)-->
+           <!--@Html.ValidationMessageFor(model => model.Morada_Bairro)-->
+        </div>
+
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.Morada_Municipio)-->
+        </div>
+        <div class="editor-field">
+            <!-- @Html.EditorFor(model => model.Morada_Municipio)-->
+            <!--@Html.ValidationMessageFor(model => model.Morada_Municipio)-->
+        </div>
+
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.Morada_Provincia)-->
+        </div>
+        <div class="editor-field">
+             <!-- @Html.EditorFor(model => model.Morada_Provincia)-->
+             <!--@Html.ValidationMessageFor(model => model.Morada_Provincia)-->
+        </div>
+
+        <div class="editor-label">
+               Rua/Avenida
+           <!-- @Html.LabelFor(model => model.Morada_Rua_AVD)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Morada_Rua_AVD)
+            @Html.ValidationMessageFor(model => model.Morada_Rua_AVD)
+        </div>
+
+        <div class="editor-label">
+             Nº/ APT
+           <!--@Html.LabelFor(model => model.Morada_Numero_Porta)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Morada_Numero_Porta)
+            @Html.ValidationMessageFor(model => model.Morada_Numero_Porta)
+        </div>
+        <div class="editor-label">
+          <!--  @Html.LabelFor(model => model.Id_Morada_Bairro)-->
+        </div>
+        <div class="editor-field">
+           <!-- @Html.EditorFor(model => model.Id_Morada_Bairro)-->
+           <!-- @Html.ValidationMessageFor(model => model.Id_Morada_Bairro)-->
+            @Html.DropDownList("Id_Morada_Bairro", new SelectList(ViewBag.Bairros, "ID", "Nome"), "--Selecciona a Morada--")
+        </div>
+    
+        <p>
+            <input type="submit" value="Guardar & Sair" />
+        </p>
+    </fieldset>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

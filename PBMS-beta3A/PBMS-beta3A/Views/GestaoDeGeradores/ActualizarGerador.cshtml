@@ -1,0 +1,257 @@
+﻿@model PBMS_beta3A.Model.GeradorElectrico
+
+@{
+    ViewBag.Title = "ActualizarGerador";
+}
+
+<h2>Gerador</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Actualização</legend>
+
+        @Html.HiddenFor(model => model.ID)
+
+        <div class="editor-label">
+              Ruido dB:
+           <!-- @Html.LabelFor(model => model.RuidoEmDb) -->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.RuidoEmDb)
+            @Html.ValidationMessageFor(model => model.RuidoEmDb)
+        </div>
+        <br />
+        <div class="editor-label">
+            Litros:
+           <!-- @Html.LabelFor(model => model.CapacidadeEmLitros)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CapacidadeEmLitros)
+            @Html.ValidationMessageFor(model => model.CapacidadeEmLitros)
+        </div>
+        <br />
+        <div class="editor-label">
+        Horas de funcinamento:
+            <!--@Html.LabelFor(model => model.HorasDeFuncionamento)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HorasDeFuncionamento)
+            @Html.ValidationMessageFor(model => model.HorasDeFuncionamento)
+        </div>
+        <br />
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TipoControladorRemoto)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TipoControladorRemoto)
+            @Html.ValidationMessageFor(model => model.TipoControladorRemoto)
+        </div>
+        <br />
+        <div class="editor-label">
+             Modelo:
+            <!--@Html.LabelFor(model => model.GeradorModelo) -->
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.GeradorModelo)
+            @Html.ValidationMessageFor(model => model.GeradorModelo)
+        </div>
+        <br />
+        <div class="editor-label">
+            Fabricante:
+          <!--  @Html.LabelFor(model => model.GeradorFabricante)  -->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeradorFabricante)
+            @Html.ValidationMessageFor(model => model.GeradorFabricante)
+        </div>
+        <br />
+        <div class="editor-label">
+            KVA:
+           <!-- @Html.LabelFor(model => model.GeradorPotenciaKVA) -->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeradorPotenciaKVA)
+            @Html.ValidationMessageFor(model => model.GeradorPotenciaKVA)
+        </div>
+        <br />
+        <div class="editor-label">
+        Ano de fabrico:
+            <!--@Html.LabelFor(model => model.GeradorAnoDeFabrico)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeradorAnoDeFabrico)
+            @Html.ValidationMessageFor(model => model.GeradorAnoDeFabrico)
+        </div>
+        <br />
+        <div class="editor-label">
+             Número de Fases:
+           <!-- @Html.LabelFor(model => model.GeradorNumeroDeFases)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeradorNumeroDeFases)
+            @Html.ValidationMessageFor(model => model.GeradorNumeroDeFases)
+        </div>
+        <br />
+        <div class="editor-label">
+           Preço de compra:
+           <!-- @Html.LabelFor(model => model.GeradorPrecoCompra)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeradorPrecoCompra)
+            @Html.ValidationMessageFor(model => model.GeradorPrecoCompra)
+        </div>
+        <br />
+        <div class="editor-label">
+            Data de Aquisição:
+           <!-- @Html.LabelFor(model => model.GeradorDataCompra) -->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeradorDataCompra)
+            @Html.ValidationMessageFor(model => model.GeradorDataCompra)
+        </div>
+        <br />
+        <div class="editor-label">
+            Distribuidor:
+           <!-- @Html.LabelFor(model => model.GeradorDistribuidor)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeradorDistribuidor)
+            @Html.ValidationMessageFor(model => model.GeradorDistribuidor)
+        </div>
+        <br />
+        <div class="editor-label">
+               Protocolo CAN:
+           <!-- @Html.LabelFor(model => model.GeradorProtocoloCAN)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeradorProtocoloCAN)
+            @Html.ValidationMessageFor(model => model.GeradorProtocoloCAN)
+        </div>
+        <br />
+        <div class="editor-label">
+             Protocolo MODBUS:
+           <!-- @Html.LabelFor(model => model.GeradorProtocoloModbus)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeradorProtocoloModbus)
+            @Html.ValidationMessageFor(model => model.GeradorProtocoloModbus)
+        </div>
+        <br />
+        <div class="editor-label">
+
+        Tipo de Combustível:
+           <!-- @Html.LabelFor(model => model.GeradorTipoCombustivel)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeradorTipoCombustivel)
+            @Html.ValidationMessageFor(model => model.GeradorTipoCombustivel)
+        </div>
+        <br />
+        <div class="editor-label">
+           Marca:
+           <!-- @Html.LabelFor(model => model.Marca) -->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Marca)
+            @Html.ValidationMessageFor(model => model.Marca)
+        </div>
+
+        <div class="editor-label">
+           Protocolo GSM: 
+           <!--@Html.LabelFor(model => model.GeradorIncorporaGSM)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeradorIncorporaGSM)
+            @Html.ValidationMessageFor(model => model.GeradorIncorporaGSM)
+        </div>
+        <br />
+        <div class="editor-label">
+               Programação Local
+          <!--  @Html.LabelFor(model => model.GeradorprogramadorLocal)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeradorprogramadorLocal)
+            @Html.ValidationMessageFor(model => model.GeradorprogramadorLocal)
+        </div>
+        <br />
+        <div class="editor-label">
+            Arranque:
+           <!-- @Html.LabelFor(model => model.GeradorTipoDeArranque)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeradorTipoDeArranque)
+            @Html.ValidationMessageFor(model => model.GeradorTipoDeArranque)
+        </div>
+        <br />
+        <div class="editor-label">
+             Tensão Nominal da Bateria:
+           <!-- @Html.LabelFor(model => model.GeradorBateria)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeradorBateria)
+            @Html.ValidationMessageFor(model => model.GeradorBateria)
+        </div>
+        <br />
+        <div class="editor-label">
+                 Kg:
+           <!-- @Html.LabelFor(model => model.Dimensao_kg) -->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Dimensao_kg)
+            @Html.ValidationMessageFor(model => model.Dimensao_kg)
+        </div>
+        <br />
+        <div class="editor-label">
+            Altura:
+          <!--  @Html.LabelFor(model => model.Dimensao_H) -->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Dimensao_H)
+            @Html.ValidationMessageFor(model => model.Dimensao_H)
+        </div>
+        <br />
+        <div class="editor-label">
+           Largura:
+           <!-- @Html.LabelFor(model => model.Dimensao_L)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Dimensao_L)
+            @Html.ValidationMessageFor(model => model.Dimensao_L)
+        </div>
+        <br />
+        <div class="editor-label">
+               Cumprimento:
+           <!-- @Html.LabelFor(model => model.Dimensao_C)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Dimensao_C)
+            @Html.ValidationMessageFor(model => model.Dimensao_C)
+        </div>
+        <br />
+        <div class="editor-label">
+          <!--  @Html.LabelFor(model => model.Estado) -->
+        </div>
+        <div class="editor-field">
+           <!-- @Html.EditorFor(model => model.Estado)-->
+           <!-- @Html.ValidationMessageFor(model => model.Estado)-->
+
+            <select id="Estado" name="Estado"><option value="">-- Novo Estado --</option>
+                <option value="1">  Stock         </option>
+                <option value="3">  Online        </option>
+                <option value="14"> Em Teste 24h  </option>
+                <option value="4">  Em Manutenção </option>
+                <option value="13"> Perdido       </option>
+                </select>
+        </div>
+
+        <p>
+            <input type="submit" value="Guardar & Sair" />
+        </p>
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,91 @@
+﻿@model IEnumerable<PBMS_beta3A.Model.ListaDeSITES>
+
+<p>
+    <p> Última consulta feita em: @DateTime.Now.ToString("HH:mm:ss") </p> 
+</p>
+<table>
+    <tr>
+       <th>
+           Site
+        </th>
+        <th>
+            Província
+        </th>
+        <th>
+            Município
+        </th>
+        <th>
+            Bairro
+        </th>
+        <th>
+            Instalado
+        </th>
+        <th>
+            Cliente
+        </th>
+        <th>
+            Nr.Telefone
+        </th>
+        <th>
+            Ref.Geraway
+        </th>
+        <th>
+           Potência KVA
+        </th>
+        <th>
+            Estado
+        </th>
+        <th>
+            Categoria
+        </th>
+        <th>
+          Actualizar
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SITENome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SITEProvincia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SITEMunicipio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SITEBairro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SITEDataInstalacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SITENomeCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SITEContactoMobile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SITEGRWYPartNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SITEGRDORKVA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SITEEstadoDescricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SITERTiposeferencia)
+        </td>
+        <td>
+            @Html.ActionLink("Clica aqui", "EditarSiteParametros", new { id=1}) 
+            @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |*@
+            @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) 
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+        </td>
+    </tr>
+}
+
+</table>

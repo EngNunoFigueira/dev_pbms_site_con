@@ -1,0 +1,174 @@
+﻿@model PBMS_beta3A.Model.CriarNovoSite
+
+@{
+    ViewBag.Title = "CriarNovoSite";
+}
+
+<h2>Configurações</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Especificações Técnicas</legend>
+
+        <div class="editor-label">
+          <!--  @Html.LabelFor(model => model.Id_Gerador) -->
+        </div>
+        <div class="editor-field">
+           <!-- @Html.EditorFor(model => model.Id_Gerador) -->
+           <!-- @Html.ValidationMessageFor(model => model.Id_Gerador) -->
+
+        <div class="editor-field">
+               @Html.DropDownList("Id_Gerador", new SelectList(ViewBag.Geradores, "ID", "potencia_KVA"), "-- Selecciona a Potência Eléctrica do Gerador KVA--")
+        </div>
+
+        </div>
+
+        <div class="editor-label">
+           <!-- @*@Html.LabelFor(model => model.Id_Geraway)*@ -->
+        </div>
+        <div class="editor-field">
+           <!--  @*@Html.EditorFor(model => model.Id_Geraway)*@  -->
+           <!--  @*@Html.ValidationMessageFor(model => model.Id_Geraway)*@ -->
+
+           @Html.DropDownList("Id_Geraway", new SelectList(ViewBag.Geraways, "ID", "modelo"), "-- Selecciona o Modelo do Geraway--")
+
+        </div>
+
+        <div class="editor-label">
+          <!--  @*@Html.LabelFor(model => model.Id_SimCard)*@-->
+        </div>
+        <div class="editor-field">
+           <!--  @*@Html.EditorFor(model => model.Id_SimCard)*@ -->
+           <!--  @*@Html.ValidationMessageFor(model => model.Id_SimCard)*@ -->
+
+            @Html.DropDownList("Id_SimCard", new SelectList(ViewBag.SimCardNumber, "ID", "Numero"), "-- Selecciona o Número do SimCard--")
+        </div>
+
+        <div class="editor-label">
+          <!--  @*@Html.LabelFor(model => model.Id_Cliente)*@ -->
+        </div>
+        <div class="editor-field">
+           <!--   @*@Html.EditorFor(model => model.Id_Cliente)*@ -->
+           <!--   @*@Html.ValidationMessageFor(model => model.Id_Cliente)*@ -->
+
+                 @Html.DropDownList("Id_Cliente", new SelectList(ViewBag.Clientes, "ID", "Nome"), "-- Selecciona o Nome do Cliente--")
+        </div>
+
+        <div class="editor-label">
+           <!-- @*@Html.LabelFor(model => model.Id_Provincia)*@ -->
+        </div>
+        <div class="editor-field">
+           <!-- @*@Html.EditorFor(model => model.Id_Provincia)*@ -->
+           <!-- @*@Html.ValidationMessageFor(model => model.Id_Provincia)*@ -->
+
+            @Html.DropDownList("Id_Provincia", new SelectList(ViewBag.Provincias, "ID", "Nome"), "-- Selecciona a Província--")
+        </div>
+
+        <div class="editor-label">
+           <!-- @*@Html.LabelFor(model => model.Id_Municipio)*@ -->
+        </div>
+        <div class="editor-field">
+           <!-- @*@Html.EditorFor(model => model.Id_Municipio)*@ -->
+           <!-- @*@Html.ValidationMessageFor(model => model.Id_Municipio)*@ -->
+
+                @Html.DropDownList("Id_Municipio", new SelectList(ViewBag.Municipios, "ID", "Nome"), "-- Selecciona a Município--")
+        </div>
+         <div class="editor-label">
+         <!--   @*@Html.LabelFor(model => model.Id_Bairro)*@-->
+        </div>
+        <div class="editor-field">
+          <!--   @*@Html.EditorFor(model => model.Id_Bairro)*@ -->
+          <!--   @*@Html.ValidationMessageFor(model => model.Id_Bairro)*@ -->
+
+           @Html.DropDownList("Id_Bairro", new SelectList(ViewBag.Bairros, "ID", "Nome"), "-- Selecciona a Bairro--")
+        </div>
+          <div class="editor-label">
+          Data de Criação
+           <!-- @Html.LabelFor(model => model.Data) -->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Data)
+            @Html.ValidationMessageFor(model => model.Data)
+        </div>
+        <div class="editor-label">
+           Nome do Site
+            <!--@Html.LabelFor(model => model.NomeDoSite)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NomeDoSite)
+            @Html.ValidationMessageFor(model => model.NomeDoSite)
+        </div>
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.CoodernadasGPS) -->
+        </div>
+        <div class="editor-field">
+           <!--  @Html.EditorFor(model => model.CoodernadasGPS)-->
+           <!-- @Html.ValidationMessageFor(model => model.CoodernadasGPS) -->
+        </div>
+
+        <div class="editor-label">
+         <!--   @*@Html.LabelFor(model => model.Id_Status)*@ -->
+        </div>
+
+        <div class="editor-label">
+          <!--@Html.LabelFor(model => model.Id_Referencia)-->
+        </div>
+        <div class="editor-field">
+          <!--  @*@Html.EditorFor(model => model.Id_Tipo_Referencia)*@ -->
+          <!--  @*@Html.ValidationMessageFor(model => model.Id_Tipo_Referencia)*@-->
+                @Html.DropDownList("Id_Referencia", new SelectList(ViewBag.Referencias, "ID", "Descricao"), "-- Selecciona o tipo de site--")
+        </div>
+
+        <div class="editor-field">
+          <!--  @*@Html.EditorFor(model => model.Id_Status)*@ -->
+          <!--  @*@Html.ValidationMessageFor(model => model.Id_Status)*@ -->
+          <div class="editor-field">
+          <select id="Id_Estado" name="Id_Estado"><option value="">-- Estado Actual--</option>
+           <option value="1">  Stock          </option>
+           <option value="3 "> Online         </option>
+           <option value="6">  Desligado      </option>
+           <option value="14"> Em Teste 25    </option>
+          </select>
+          </div>
+        </div>
+          <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.NomeDoMesDaProximaManutencao)-->
+        </div>
+        <div class="editor-field">
+           <!-- @Html.EditorFor(model => model.NomeDoMesDaProximaManutencao)-->
+           <!-- @Html.ValidationMessageFor(model => model.NomeDoMesDaProximaManutencao)-->
+        </div>
+
+        <div class="editor-label">
+            <!--@Html.LabelFor(model => model.Id_MesDaProximaManutencao)-->
+        </div>
+        <div class="editor-field">
+            <!--@Html.EditorFor(model => model.Id_MesDaProximaManutencao)
+            <!--@Html.ValidationMessageFor(model => model.Id_MesDaProximaManutencao)-->
+           <select id="Id_MesDaProximaManutencao" name="Id_MesDaProximaManutencao"><option value="">-- Próxima Manutenção--</option>
+                <option value="1"> Janeiro</option>
+                <option value="2"> Fevereiro  </option>
+                <option value="3"> Março      </option>
+                <option value="4"> Abril      </option>
+                <option value="5"> Maio       </option>
+                <option value="6"> Junho      </option>
+                <option value="7"> Julio      </option>
+                <option value="8"> Agosto     </option>
+                <option value="9"> Setembro   </option>
+                <option value="10"> Outubro    </option>
+                <option value="11"> Novembro   </option>
+                <option value="12"> Dezembro   </option>
+          </select>
+        </div>
+
+        <p>
+            <input type="submit" value="Guardar & Sair" />
+        </p>
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

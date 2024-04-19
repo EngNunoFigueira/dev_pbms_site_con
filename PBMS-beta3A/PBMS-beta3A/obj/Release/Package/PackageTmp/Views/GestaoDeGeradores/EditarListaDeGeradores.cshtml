@@ -1,0 +1,132 @@
+﻿@model PBMS_beta3A.Model.ListaDeGeradores
+
+@{
+    ViewBag.Title = "EditarListaDeGeradores";
+}
+
+<h2>Actualizar Informações do Gerador</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Gerador Eléctrico</legend>
+
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.GeradorFabricante)-->
+           Fabricante
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeradorFabricante)
+            @Html.ValidationMessageFor(model => model.GeradorFabricante)
+        </div>
+
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.GeradorMarca)-->
+           Marca do Gerador
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeradorMarca)
+            @Html.ValidationMessageFor(model => model.GeradorMarca)
+        </div>
+
+        <div class="editor-label">
+           <!--@Html.LabelFor(model => model.GeradorModelo)-->
+           Modelo do Gerador
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeradorModelo)
+            @Html.ValidationMessageFor(model => model.GeradorModelo)
+        </div>
+
+        <div class="editor-label">
+          <!-- @Html.LabelFor(model => model.GeradorKVA) -->
+          Potênca Eléctrica em KVA
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeradorKVA)
+            @Html.ValidationMessageFor(model => model.GeradorKVA)
+        </div>
+
+        <div class="editor-label">
+         <!--   @Html.LabelFor(model => model.GeradorTipo)-->
+         Tipo de Gerador
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeradorTipo)
+            @Html.ValidationMessageFor(model => model.GeradorTipo)
+        </div>
+
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.GeradorAnoFabrico) -->
+            Ano de Fabrico do Gerador
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeradorAnoFabrico)
+            @Html.ValidationMessageFor(model => model.GeradorAnoFabrico)
+        </div>
+
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.GeradorNumeroDoMotor) -->
+           Número do Motor do Gerador
+           N
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeradorNumeroDoMotor)
+            @Html.ValidationMessageFor(model => model.GeradorNumeroDoMotor)
+        </div>
+
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.GeradorCapacidadeLitros)-->
+           Capacidade em Litros
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeradorCapacidadeLitros)
+            @Html.ValidationMessageFor(model => model.GeradorCapacidadeLitros)
+        </div>
+
+        <div class="editor-label">
+            <!--@Html.LabelFor(model => model.GeradorNumeroDoAlternador)-->
+            Número do Alternador do Gerador
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeradorNumeroDoAlternador)
+            @Html.ValidationMessageFor(model => model.GeradorNumeroDoAlternador)
+        </div>
+
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.GeradorEstadoOnOff)-->
+             Estado Actual do Gerador
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeradorEstadoOnOff)
+            @Html.ValidationMessageFor(model => model.GeradorEstadoOnOff)
+        </div>
+
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.GeradorSITE)-->
+           Nome do Site Instalado
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeradorSITE)
+            @Html.ValidationMessageFor(model => model.GeradorSITE)
+        </div>
+
+        <div class="editor-label">
+           <!--@Html.LabelFor(model => model.GeradorRuido)-->
+           Nível de Ruído do Gerador
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeradorRuido)
+            @Html.ValidationMessageFor(model => model.GeradorRuido)
+        </div>
+
+        <p>
+            <input type="submit" value="Guardar info" />
+        </p>
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

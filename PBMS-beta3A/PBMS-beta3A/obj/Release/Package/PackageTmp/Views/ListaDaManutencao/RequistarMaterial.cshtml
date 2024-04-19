@@ -1,0 +1,179 @@
+﻿@model PBMS_beta3A.Model.RequisitarMaterial
+
+@{
+    ViewBag.Title = "RequistarMaterial";
+}
+
+<h2>Requisição</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>RequisitarMaterial</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mat0001)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.mat0001)
+            @Html.ValidationMessageFor(model => model.mat0001)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mat0002)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.mat0002)
+            @Html.ValidationMessageFor(model => model.mat0002)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mat0003)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.mat0003)
+            @Html.ValidationMessageFor(model => model.mat0003)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mat0004)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.mat0004)
+            @Html.ValidationMessageFor(model => model.mat0004)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mat0005)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.mat0005)
+            @Html.ValidationMessageFor(model => model.mat0005)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mat0006)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.mat0006)
+            @Html.ValidationMessageFor(model => model.mat0006)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mat0007)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.mat0007)
+            @Html.ValidationMessageFor(model => model.mat0007)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mat0008)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.mat0008)
+            @Html.ValidationMessageFor(model => model.mat0008)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mat0009)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.mat0009)
+            @Html.ValidationMessageFor(model => model.mat0009)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mat0010)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.mat0010)
+            @Html.ValidationMessageFor(model => model.mat0010)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mat0011)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.mat0011)
+            @Html.ValidationMessageFor(model => model.mat0011)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mat0012)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.mat0012)
+            @Html.ValidationMessageFor(model => model.mat0012)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mat0013)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.mat0013)
+            @Html.ValidationMessageFor(model => model.mat0013)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mat0014)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.mat0014)
+            @Html.ValidationMessageFor(model => model.mat0014)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mat0015)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.mat0015)
+            @Html.ValidationMessageFor(model => model.mat0015)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mat0016)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.mat0016)
+            @Html.ValidationMessageFor(model => model.mat0016)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SiteID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SiteID)
+            @Html.ValidationMessageFor(model => model.SiteID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TecnicoID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TecnicoID)
+            @Html.ValidationMessageFor(model => model.TecnicoID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DataDaManutencao)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DataDaManutencao)
+            @Html.ValidationMessageFor(model => model.DataDaManutencao)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

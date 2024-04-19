@@ -1,0 +1,68 @@
+﻿@model IEnumerable<PBMS_beta3A.Model.ManutencaoSite>
+
+@{
+    ViewBag.Title = "Prximas Manutencoes";
+}
+
+<!------------------------------------------------------------JavaScript código------------------------------------------>
+<script type="text/javascript">
+
+    function ProximasManutencoes() {
+
+        var get = document.getElementById("MesProxManutencao");
+        var mes = get.options[get.selectedIndex].value;
+
+        $.ajax({
+            type: 'GET', url: '/GestaoDeSites/ConsultarProximasManutencoes',
+            dataType: 'html',
+            cache: false,
+            async: true,
+            data: { MesDaProximaManutencao: mes },
+            success: function (data)
+            { $('#ResultadoDaPesquisa').html(data); }
+
+        });
+    }
+   
+</script>
+
+<!------------------------------------------------------------HTML---------------------------------------------------------->
+
+<h2>Próximas Manutenções</h2>
+
+<div id="Pmanutencao">
+
+ <div id="Pmanutencao_1" >
+    <br />
+       <select id="MesProxManutencao" >
+
+        <option value="1" selected="selected">   Janeiro    </option>
+        <option value="2">                       Fevereiro  </option>
+        <option value="3">                       Março      </option>
+        <option value="4">                       Abril      </option>
+        <option value="5">                       Maio       </option>
+        <option value="6">                       Junho      </option>
+        <option value="7">                       Julio      </option>
+        <option value="8">                       Agosto     </option>
+        <option value="9">                       Setembro   </option>
+        <option value="10">                      Outubro    </option>
+        <option value="11">                      Novembro   </option>
+        <option value="12">                      Dezembro   </option>
+        </select>
+   
+    <input type="button" id="Prxmtcao" name="" value="Pesquisar" onclick="ProximasManutencoes()" />
+ </div>
+</div>
+
+<p3> 
+
+ <div id="ResultadoDaPesquisa">
+    @{
+        Html.RenderPartial("ConsultarProximasManutencoes");
+    }
+
+</div>
+
+</p3> 
+
+

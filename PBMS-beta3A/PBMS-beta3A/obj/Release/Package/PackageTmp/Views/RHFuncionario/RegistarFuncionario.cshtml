@@ -1,0 +1,159 @@
+﻿@model PBMS_beta3A.Model.FichaFuncionario
+
+@{
+    ViewBag.Title = "RegistarFuncionario";
+}
+
+<h2>Equipa Técnica</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Ficha de Contacto do Técnico</legend>
+
+        <div class="editor-label">
+              nome
+            <!--@Html.LabelFor(model => model.Nome)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nome)
+            @Html.ValidationMessageFor(model => model.Nome)
+        </div>
+        <div class="editor-label">
+            apelido
+            <!--@Html.LabelFor(model => model.Apelido)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Apelido)
+            @Html.ValidationMessageFor(model => model.Apelido)
+        </div>
+          <div class="editor-label">
+              telefone fixo
+           <!-- @Html.LabelFor(model => model.Telefone)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Telefone)
+            @Html.ValidationMessageFor(model => model.Telefone)
+        </div>
+        <div class="editor-label">
+              telemóvel
+           <!-- @Html.LabelFor(model => model.Telemovel)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Telemovel)
+            @Html.ValidationMessageFor(model => model.Telemovel)
+        </div>
+        <div class="editor-label">
+            correio electrónico
+            <!--@Html.LabelFor(model => model.Email)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+        <!------------------------------------------------------------------------------------------------------------>
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.DocumentoID)-->
+        </div>
+        <div class="editor-field">
+            <!--@Html.EditorFor(model => model.DocumentoID)-->
+            <!--@Html.ValidationMessageFor(model => model.DocumentoID)-->
+        </div>
+
+        <div class="editor-label">
+            <!--@Html.LabelFor(model => model.Tipo)-->
+        </div>
+        <div class="editor-field">
+           <!-- @Html.EditorFor(model => model.Tipo) -->
+           <!-- @Html.ValidationMessageFor(model => model.Tipo) -->
+           <select id="Tipo" name="Tipo"><option value="">-- Tipo de Documento--</option>
+           <option value="BI">          BI       </option>
+           <option value="Passaporte"> Passaporte</option>
+           </select>
+        </div>
+
+        <div class="editor-label">
+              número do documento
+           <!-- @Html.LabelFor(model => model.Numero)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Numero)
+            @Html.ValidationMessageFor(model => model.Numero)
+        </div>
+
+        <div class="editor-label">
+               data de validade
+            <!--@Html.LabelFor(model => model.Validade)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Validade)
+            @Html.ValidationMessageFor(model => model.Validade)
+        </div>
+
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.ContactosID)-->
+        </div>
+        <div class="editor-field">
+           <!-- @Html.EditorFor(model => model.ContactosID)
+           <!-- @Html.ValidationMessageFor(model => model.ContactosID)-->
+        </div>
+        <div class="editor-label">
+            <!--@Html.LabelFor(model => model.Grau)-->
+        </div>
+        <div class="editor-field">
+           <!-- @Html.EditorFor(model => model.Grau)-->
+            <!--@Html.ValidationMessageFor(model => model.Grau)-->
+        </div>
+
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.Id_Grau)-->
+        </div>
+        <div class="editor-field">
+           <!-- @Html.EditorFor(model => model.Id_Grau)-->
+            <!--@Html.ValidationMessageFor(model => model.Id_Grau)-->
+           <select id="Id_Grau" name="Id_Grau"><option value="">-- Escolaridade--</option>
+           <option value="1">  Estudos Básicos            </option>
+           <option value="2">  Estudos Superiores         </option>
+           <option value="3">  Estudos Médio Técnico      </option>
+           <option value="4">  Estudos Pré-Universitários </option>
+           </select>
+        </div>
+
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.Id_Funcao)-->
+        </div>
+        <div class="editor-field">
+          <!--  @Html.EditorFor(model => model.Id_Funcao)-->
+          <!--  @Html.ValidationMessageFor(model => model.Id_Funcao)-->
+            <select id="Id_Funcao" name="Id_Funcao"><option value="">-- Especialidade--</option>
+            <option value="1">   Motorista         </option>
+            <option value="2">   Electricista      </option>
+            <option value="3">   Mecânico          </option>
+            <option value="4">   Electrónico       </option>
+            <option value="5">   Administrativo    </option>
+            <option value="6">   Pintor Auto       </option>
+            <option value="7">   Técnico Básico    </option>
+            <option value="8">   Informático       </option>
+            <option value="9">   Gestor de Projectos     </option>
+            <option value="10">  Coordernador de Equipa  </option>
+            <option value="11">  Fiel de Armazém         </option>
+            </select>
+        </div>
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.Descricao_Funcao)-->
+        </div>
+        <div class="editor-field">
+            <!--@Html.EditorFor(model => model.Descricao_Funcao)-->
+            <!-- @Html.ValidationMessageFor(model => model.Descricao_Funcao)-->
+        </div>
+
+        <p>
+            <input type="submit" value="Guardar & Sair" />
+        </p>
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

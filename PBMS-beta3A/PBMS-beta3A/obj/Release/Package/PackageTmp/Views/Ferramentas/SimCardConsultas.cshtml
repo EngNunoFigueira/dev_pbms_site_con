@@ -1,0 +1,80 @@
+﻿@model IEnumerable<PBMS_beta3A.Model.ListaDeSimCard>
+
+@{
+    ViewBag.Title = "NumerosDeTelefone";
+}
+
+<br />
+
+<table>
+        <tr>
+        <th>
+            Número
+        </th>
+        <th>
+            Operadora
+        </th>
+        <th>
+            Estado Actual
+        </th>
+        <th>
+            Puk1
+        </th>
+        <th>
+            Puk2
+        </th>
+        <th>
+            Código Pin
+        </th>
+        <th>
+           Valor em UTTs
+        </th>
+        <th>
+           Data da Última Recarga
+        </th>
+         <th>
+            Recarga Online
+        </th>
+        <th>
+            Actualizar
+        </th>
+        <th></th>
+    </tr>
+
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Numero)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Operadora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstadoDescricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Puk_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Puk_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PinCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValorEmUTTs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataUltimaRecarga)
+        </td>
+        <td>
+                @Html.ActionLink("Recarga Online", "RecargaRemotas", new { id = item.PinCode })  
+        </td>
+        <td>
+                @Html.ActionLink("Actualizar", "ActualizarSimCard", new { id = item.ID }) 
+        </td>
+    </tr>
+}
+
+</table>

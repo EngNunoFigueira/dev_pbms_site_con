@@ -1,0 +1,67 @@
+﻿@model IEnumerable<PBMS_beta3A.Model.GestorDeTarefas>
+
+@{
+    ViewBag.Title = "GestorDeTarefas";
+}
+
+<h2>Gestor de Operações</h2>
+
+<table>
+    <tr>
+        <th>
+           Nome
+        </th>
+        <th>
+           Apelido
+        </th>
+        <th>
+           Processo 
+        </th>
+          <th>
+           Data de Abertura 
+        </th>
+         <th>
+           Data de Conclusão 
+        </th>
+          <th>
+           Horas de Trabalho 
+        </th>
+        <th>
+           Estado
+        </th>
+         <th>
+           Nova Tarefa
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeDoFuncionario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApelifoDoFuncionario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TarefaEmCurso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateInicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateFecho)
+        </td>
+          <td>
+            @Html.DisplayFor(modelItem => item.NumeroDeHoras)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstadoActual)
+        </td>
+        <td>
+            @Html.ActionLink("Criar", "Edit", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

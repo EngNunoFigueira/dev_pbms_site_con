@@ -1,0 +1,97 @@
+﻿@model IEnumerable<PBMS_beta3A.Model._Geraway>
+
+<table>
+        <tr>
+        <th>
+            Modelo
+        </th>
+        <th>
+            Firmware
+        </th>
+        <th>
+            Serial 
+        </th>
+        <th>
+            Part Number
+        </th>
+        <th>
+           S [ A ]
+        </th>
+        <th>
+            S [ V ]
+        </th>
+        <th>
+            S [ Pca ]
+        </th>
+        <th>
+            S [ ºC ]
+        </th>
+        <th>
+            S [ Nm2 ]
+        </th>
+        <th>
+            S [ Hz ]
+        </th>
+        <th>
+            Mother board
+        </th>
+        <th>
+            Placa
+        </th>
+        <th>
+            Estado
+        </th>
+         <th>
+            link
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.modelo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.firmware_version)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.serial_number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.part_number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.n_sensore_I)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.n_sensores_V)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.n_sensores_P)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.n_sensores_T)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.n_sensores_F)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.n_sensores_N)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipo_M_T_B)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PCB_version)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescricaoDoEstado)
+        </td>
+        <td>
+            @Html.ActionLink("Actualizar", "EditarGeraway", new { id = item.ID }) 
+        </td>
+    </tr>
+}
+
+</table>

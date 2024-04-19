@@ -1,0 +1,157 @@
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\PBMS-beta3A.dll
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\PBMS-beta3A.pdb
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\Antlr3.Runtime.dll
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\DotNetOpenAuth.AspNet.dll
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\DotNetOpenAuth.Core.dll
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\DotNetOpenAuth.OAuth.Consumer.dll
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\DotNetOpenAuth.OAuth.dll
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\DotNetOpenAuth.OpenId.dll
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\EntityFramework.dll
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\EntityFramework.SqlServer.dll
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\Microsoft.Web.Infrastructure.dll
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\Microsoft.Web.WebPages.OAuth.dll
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\Newtonsoft.Json.dll
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Net.Http.dll
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Net.Http.WebRequest.dll
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Helpers.dll
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Mvc.dll
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Optimization.dll
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Razor.dll
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Web.WebPages.Deployment.dll
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Web.WebPages.dll
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Web.WebPages.Razor.dll
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\WebGrease.dll
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\WebMatrix.Data.dll
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\WebMatrix.WebData.dll
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\EntityFramework.xml
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\EntityFramework.SqlServer.xml
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\Newtonsoft.Json.xml
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Net.Http.xml
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Net.Http.WebRequest.xml
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Helpers.xml
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Mvc.xml
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Razor.xml
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Web.WebPages.xml
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Web.WebPages.Deployment.xml
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Web.WebPages.Razor.xml
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\WebMatrix.Data.xml
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\Microsoft.Web.WebPages.OAuth.xml
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\WebMatrix.WebData.xml
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\DotNetOpenAuth.AspNet.xml
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\DotNetOpenAuth.Core.xml
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\DotNetOpenAuth.OAuth.Consumer.xml
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\DotNetOpenAuth.OAuth.xml
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\DotNetOpenAuth.OpenId.xml
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\obj\Debug\ResolveAssemblyReference.cache
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\obj\Debug\PBMS-beta3A.dll
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\obj\Debug\PBMS-beta3A.pdb
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\obj\Debug\PBMS_beta3A.Migrations.InitialCreate.resources
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\obj\Debug\GenerateResource.read.1.tlog
+c:\users\nuno figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\Microsoft.CSharp.dll
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.ComponentModel.DataAnnotations.dll
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Data.DataSetExtensions.dll
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Data.dll
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Data.Entity.Design.dll
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Data.Entity.dll
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Data.Linq.dll
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Drawing.dll
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.EnterpriseServices.dll
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Net.Http.Formatting.dll
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Transactions.dll
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Abstractions.dll
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Web.ApplicationServices.dll
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Web.dll
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Web.DynamicData.dll
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Entity.dll
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Extensions.dll
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Http.dll
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Http.WebHost.dll
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Routing.dll
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Services.dll
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Xml.dll
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Xml.Linq.dll
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Net.Http.Formatting.xml
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Http.xml
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Http.WebHost.xml
+C:\Users\Nuno Figueira\documents\visual studio 2010\Projects\PBMS-beta3A\PBMS-beta3A\bin\SimpleCrypto.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\obj\Debug\PBMS-beta3A.csproj.AssemblyReference.cache
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\obj\Debug\PBMS_beta3A.Migrations.InitialCreate.resources
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\obj\Debug\PBMS-beta3A.csproj.GenerateResource.cache
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\obj\Debug\PBMS-beta3A.csproj.CoreCompileInputs.cache
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\PBMS-beta3A.dll.config
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\PBMS-beta3A.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\PBMS-beta3A.pdb
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\Antlr3.Runtime.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\DotNetOpenAuth.Core.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\EntityFramework.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\EntityFramework.SqlServer.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\Microsoft.Contracts.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\Microsoft.CSharp.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\Newtonsoft.Json.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\SimpleCrypto.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.ComponentModel.DataAnnotations.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Data.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Data.Entity.Design.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Data.Linq.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Drawing.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.EnterpriseServices.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Net.Http.Formatting.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Transactions.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Abstractions.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Web.ApplicationServices.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Web.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Web.DynamicData.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Entity.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Helpers.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Http.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Http.WebHost.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Mvc.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Optimization.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Razor.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Routing.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Services.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Web.WebPages.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Web.WebPages.Razor.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Xml.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\WebGrease.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\WebMatrix.Data.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\WebMatrix.WebData.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\Org.Mentalis.Security.Cryptography.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\Mono.Math.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\DotNetOpenAuth.Core.xml
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\EntityFramework.xml
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\EntityFramework.SqlServer.xml
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\Newtonsoft.Json.xml
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Net.Http.Formatting.xml
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Helpers.xml
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Http.xml
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Http.WebHost.xml
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Mvc.xml
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Web.Razor.xml
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Web.WebPages.xml
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\System.Web.WebPages.Razor.xml
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\WebMatrix.Data.xml
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\WebMatrix.WebData.xml
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\Org.Mentalis.Security.Cryptography.xml
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\bin\Mono.Math.xml
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\obj\Debug\PBMS-bet.DDA13853.Up2Date
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\obj\Debug\PBMS-beta3A.dll
+C:\Users\ekumb\OneDrive\Documentos\PBMS-beta3A\PBMS-beta3A\obj\Debug\PBMS-beta3A.pdb

@@ -1,0 +1,82 @@
+﻿@model IEnumerable<PBMS_beta3A.Model._Geraway>
+
+@{
+    ViewBag.Title = "IndexGestaoListaGeraway";
+}
+
+<script type="text/javascript">
+
+    function GestaoGeraway() {
+
+        /*-------------------------------------------Lê quais das 4 opções o utilizador seleccionou---------------------*/
+
+        var opcao = null;
+
+        if (document.getElementById("GerawayOnline").checked == true) {
+            opcao = document.getElementById("GerawayOnline").value;
+        }
+
+        if (document.getElementById("GerawayEquipamentosEmStock").checked == true) {
+            opcao = document.getElementById("GerawayEquipamentosEmStock").value;
+        }
+
+        if (document.getElementById("GerawayManutencao").checked == true) {
+            opcao = document.getElementById("GerawayManutencao").value;
+        }
+        if (document.getElementById("GerawayDesconectados").checked == true) {
+            opcao = document.getElementById("GerawayDesconectados").value;
+        }
+        if (document.getElementById("GerawayEmteste24h").checked == true) {
+            opcao = document.getElementById("GerawayEmteste24h").value;
+        }
+        if (document.getElementById("GerawayAvariado").checked == true) {
+            opcao = document.getElementById("GerawayAvariado").value;
+        }
+        /*----------------------------------------------------------END----------------------------------------------------*/
+
+        /*------------------Lê a opção que foi solicitada e faz o metódo AJAX para devolver o HTML------------------------*/
+
+        $.ajax({
+            type: 'GET', url: '/GestaoListaGeraway/ConsultaGerawayInfo',
+            dataType: 'html',
+            cache: false,
+            async: true,
+            data: { operacao: opcao },
+            success: function (data)
+            { $('#ResultadoDaPesquisa').html(data); }
+        });
+    }
+
+</script>
+
+<!-----------------------------------------------código javascript----------------------------------------------->
+
+<!-----------------------------------------------Código HTML DA VISTA--------------------------------------------->
+
+<h2>Geraway</h2>
+
+<br />
+<div>
+    @Html.ActionLink("clica para registar novo geraway", "InserirNovoGeraway")
+</div>
+
+<div id="historico" name="gerador" value="">
+
+ <form name="Historico do Gerador" id="historico_gerador" value="hgerador"method="GET" action="ConsultaGerawayInfo" >
+    <br />
+    <input type="radio"   id="GerawayOnline"                  name="opcao"    value="3" />              Online 
+    <input type="radio"   id="GerawayEquipamentosEmStock"     name="opcao"    value="1" checked/>       Em Stock 
+     <input type="radio"   id="GerawayAvariado"               name="opcao"    value="5" />              Avariados
+    <input type="radio"   id="GerawayManutencao"              name="opcao"    value="4" />              Em Manutenção
+    <input type="radio"   id="GerawayDesconectados"           name="opcao"    value="6" />              Desconectados 
+    <input type="radio"   id="GerawayEmteste24h"              name="opcao"    value="14" />             Em Teste 24 h
+
+    <input type="button"  id="gestao"                 name="gerador"  value="Pesquisar" onclick="GestaoGeraway()" />
+ </form>
+</div>
+
+ <div id="ResultadoDaPesquisa">
+ @{ 
+     @@Html.RenderPartial("ConsultaGerawayInfo");
+  }   
+

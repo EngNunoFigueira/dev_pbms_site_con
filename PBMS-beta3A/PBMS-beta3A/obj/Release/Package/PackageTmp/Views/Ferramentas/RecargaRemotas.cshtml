@@ -1,0 +1,67 @@
+﻿@model PBMS_beta3A.Model.RecargaSimCardcs
+
+@{
+    ViewBag.Title = "RecargaRemotas";
+}
+
+<h2>RecargaRemotas</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>RecargaSimCardcs</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UTTs)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.UTTs)
+            @Html.ValidationMessageFor(model => model.UTTs)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Id_SimCard)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Id_SimCard)
+            @Html.ValidationMessageFor(model => model.Id_SimCard)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CodigoRecarga)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CodigoRecarga)
+            @Html.ValidationMessageFor(model => model.CodigoRecarga)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Feedback_Referencia)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Feedback_Referencia)
+            @Html.ValidationMessageFor(model => model.Feedback_Referencia)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DataCompra)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DataCompra)
+            @Html.ValidationMessageFor(model => model.DataCompra)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

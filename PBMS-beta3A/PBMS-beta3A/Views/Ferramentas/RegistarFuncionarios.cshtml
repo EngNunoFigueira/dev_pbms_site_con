@@ -1,0 +1,135 @@
+﻿@model PBMS_beta3A.Model.RegistarFuncionario
+
+@{
+    ViewBag.Title = "RegistarFuncionarios";
+}
+
+<h2>RegistarFuncionarios</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Dados do Funcionário</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nome)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nome)
+            @Html.ValidationMessageFor(model => model.Nome)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Apelido)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Apelido)
+            @Html.ValidationMessageFor(model => model.Apelido)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NumeroDeBI)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NumeroDeBI)
+            @Html.ValidationMessageFor(model => model.NumeroDeBI)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Telemove_1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Telemove_1)
+            @Html.ValidationMessageFor(model => model.Telemove_1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Telemovel_2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Telemovel_2)
+            @Html.ValidationMessageFor(model => model.Telemovel_2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Telefone_fixo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Telefone_fixo)
+            @Html.ValidationMessageFor(model => model.Telefone_fixo)
+        </div>
+
+        <div class="editor-label">
+          <!--  @Html.LabelFor(model => model.Categoria_Id_Referencia) -->
+        </div>
+        <div class="editor-field">
+          <!--  @Html.EditorFor(model => model.Categoria_Id_Referencia) -->
+          <!--  @Html.ValidationMessageFor(model => model.Categoria_Id_Referencia) -->
+
+           <div class="editor-field">
+           <select id="Categoria_Id_Referencia" name="Categoria_Id_Referencia"><option value="">-- Seleccionar Catégoria Técnica--</option>
+           <option value="201 ">  Nível A   </option>
+           <option value="202">   Nível A++ </option>
+          </select>
+          </div>
+
+        </div>
+
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.Especialidade_Id_Referencia) -->
+        </div>
+        <div class="editor-field">
+          <!--  @Html.EditorFor(model => model.Especialidade_Id_Referencia) -->
+          <!--  @Html.ValidationMessageFor(model => model.Especialidade_Id_Referencia) -->
+
+          <div class="editor-field">
+           <select id="Especialidade_Id_Referencia" name="Especialidade_Id_Referencia"><option value="">-- Seleccionar Catégoria Especialidade--</option>
+           <option value="101 ">  Eléctrico                    </option>
+           <option value="102">   Electrónico                  </option>
+           <option value="103">  Gestor Técnico               </option>
+            <option value="104"> Electricista Mecânico       </option>
+           <option value="105">  Gestor Comercial de Peças    </option>
+           <option value="106">  Mecânico Motores Eléctricos   </option>
+          </select>
+          </div>
+
+        </div>
+
+         <div class="editor-label">
+          <!--  @Html.LabelFor(model => model.Acesso_Id_Referencia) -->
+        </div>
+        <div class="editor-field">
+           <!-- @Html.EditorFor(model => model.Acesso_Id_Referencia) -->
+           <!-- @Html.ValidationMessageFor(model => model.Acesso_Id_Referencia) -->
+
+           <div class="editor-field">
+           <select id="Acesso_Id_Referencia" name="Acesso_Id_Referencia"><option value="">-- Seleccionar Nível de Acesso Permitido--</option>
+           <option value="301 ">  Básico             </option>
+           <option value="302">   Administrador      </option>
+            <option value="301">  Assistente Técnico </option>
+          </select>
+          </div>
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

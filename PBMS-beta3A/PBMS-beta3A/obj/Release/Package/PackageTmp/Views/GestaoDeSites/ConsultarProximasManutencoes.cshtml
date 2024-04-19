@@ -1,0 +1,112 @@
+﻿@model IEnumerable<PBMS_beta3A.Model.ManutencaoSite>
+
+@{
+    ViewBag.Title = "Prximas Manutencoes";
+}
+
+<table>
+     <tr>
+        <th>
+         Site
+        </th>
+        <th>
+         Classe
+        </th>
+        <th>
+         KVA
+        </th>
+        <th>
+         Hrs
+        </th>
+        <th>
+         Gw.Ref
+        </th>
+        <th>
+         Gw.Nr
+        </th>
+        <th>
+         Estado
+        </th>
+        <th>
+         Bairro
+        </th>
+        <th>
+         Município
+        </th>
+        <th>
+         Provincía
+        </th>
+        <th>
+         Mês da Manutencao   
+        </th>
+        <th>
+         Fecho 
+        </th>
+        <th>
+         Hrs
+        </th>
+        <th>
+         Req
+        </th>
+        <th>
+         Nota
+        </th>
+         <th>
+         Planificar
+        </th>
+        <th></th>
+    </tr>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MSiteNome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MDescricaoTipoSite)
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.MPotenciaKVA)
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.Horrasuncionamento)
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.MGerawayRef)
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.MGerawayNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MDescricaoEstadoSite)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MBairro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MMunicipio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MProvincia)
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.MesProximaManutencao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataConcliusao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MHorasEstimadas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MCodigoRequisicao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MComentarioUltimaManutencao)
+        </td>
+        <td>
+            @Html.ActionLink("Continuar", "Manutencao", new { id = item.ID }) 
+        </td>
+    </tr>
+}
+
+</table>

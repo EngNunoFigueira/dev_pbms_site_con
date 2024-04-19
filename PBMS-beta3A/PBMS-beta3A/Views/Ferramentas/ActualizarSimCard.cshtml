@@ -1,0 +1,108 @@
+﻿@model PBMS_beta3A.Model.ListaDeSimCard
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SimCard</title>
+</head>
+<body>
+    <script src="~/Scripts/jquery-1.7.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    
+    @using (Html.BeginForm()) {
+        @Html.ValidationSummary(true)
+    
+        <fieldset>
+            <legend>Informações do SimCard</legend>
+    
+            @Html.HiddenFor(model => model.ID)
+
+            <div class="editor-label">
+                 Número:
+                <!--@Html.LabelFor(model => model.Numero) --> 
+            </div>
+            <div class="editor-field">
+                @Html.DisplayFor(model => model.Numero)
+                @Html.ValidationMessageFor(model => model.Numero)
+            </div>
+    <br />
+            <div class="editor-label">
+               Operadora:
+               <!-- @Html.LabelFor(model => model.Operadora) -->
+            </div>
+            <div class="editor-field">
+                @Html.DisplayFor(model => model.Operadora)
+                @Html.ValidationMessageFor(model => model.Operadora)
+            </div>
+   <br />
+               <div class="editor-label">
+                     Última Recarga Efectuada em:
+               <!-- @Html.LabelFor(model => model.DataUltimaRecarga) -->
+            </div>
+            <div class="editor-field">
+                @Html.DisplayFor(model => model.DataUltimaRecarga)
+                @Html.ValidationMessageFor(model => model.DataUltimaRecarga)
+            </div>
+    <br />
+            <div class="editor-label">
+                 UTTs:
+              <!--  @Html.LabelFor(model => model.ValorEmUTTs) -->
+            </div>
+            <div class="editor-field">
+                @Html.DisplayFor(model => model.ValorEmUTTs)
+                @Html.ValidationMessageFor(model => model.ValorEmUTTs)
+            </div>
+    <br />
+              <div class="editor-label">
+                 Código Pin:
+               <!-- @Html.LabelFor(model => model.PinCode) -->
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.PinCode)
+                @Html.ValidationMessageFor(model => model.PinCode)
+            </div>
+            <br />
+            <div class="editor-label">
+                Código Puk 1:
+               <!-- @Html.LabelFor(model => model.Puk_1) -->
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Puk_1)
+                @Html.ValidationMessageFor(model => model.Puk_1)
+            </div>
+    <br />
+            <div class="editor-label">
+                Código Puk 2:
+               <!-- @Html.LabelFor(model => model.Puk_2) -->
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Puk_2)
+                @Html.ValidationMessageFor(model => model.Puk_2)
+            </div>
+            <br />
+              <div class="editor-label">
+               <!-- @Html.LabelFor(model => model.Estado) -->
+            </div>
+            <div class="editor-field">
+                <!-- @Html.EditorFor(model => model.Estado) -->
+               <!--  @Html.ValidationMessageFor(model => model.Estado) -->
+
+                <select id="Estado" name="Estado"><option value="">-- Novo Estado --</option>
+                <option value="1">  Stock         </option>
+                <option value="3">  Online        </option>
+                <option value="14"> Em Teste 24h  </option>
+                <option value="4">  Em Manutenção </option>
+                <option value="13"> Perdido       </option>
+                </select>
+            </div>
+    <br />
+            <p>
+                <input type="submit" value="Guardar & Sair" />
+            </p>
+        </fieldset>
+    }
+</body>
+</html>

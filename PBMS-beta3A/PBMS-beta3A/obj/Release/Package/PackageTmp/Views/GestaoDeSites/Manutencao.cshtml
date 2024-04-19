@@ -1,0 +1,207 @@
+﻿@model PBMS_beta3A.Model.ManutencaoSite
+
+@{
+    ViewBag.Title = "Manutencao";
+}
+
+<h2>Planificação da Manutenção</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Detalhes do Site</legend>
+
+        @Html.HiddenFor(model => model.ID)
+
+        <div class="editor-label">
+              Nome do Site:
+           <!-- @Html.LabelFor(model => model.MSiteNome)-->
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.MSiteNome)
+            @Html.ValidationMessageFor(model => model.MSiteNome)
+        </div>
+        <br />
+        <div class="editor-label">
+             Tipo:
+           <!-- @Html.LabelFor(model => model.MTipoSite)-->
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.MDescricaoTipoSite)
+            @Html.ValidationMessageFor(model => model.MDescricaoTipoSite)
+        </div>
+        <br />
+        <div class="editor-label">
+                Estado Actual:
+           <!-- @Html.LabelFor(model => model.MEstadoSite)-->
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.MDescricaoEstadoSite)
+            @Html.ValidationMessageFor(model => model.MDescricaoEstadoSite)
+        </div>
+        <br />
+        <div class="editor-label">
+             Localização Bairro:
+           <!-- @Html.LabelFor(model => model.MBairro)-->
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.MBairro)
+            @Html.ValidationMessageFor(model => model.MBairro)
+        </div>
+        <br />
+        <div class="editor-label">
+              Localização Município:
+           <!-- @Html.LabelFor(model => model.MMunicipio)-->
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.MMunicipio)
+            @Html.ValidationMessageFor(model => model.MMunicipio)
+        </div>
+        <br />
+        <div class="editor-label">
+            Localização Provincía:
+            <!--@Html.LabelFor(model => model.MProvincia)-->
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.MProvincia)
+            @Html.ValidationMessageFor(model => model.MProvincia)
+        </div>
+        <br />
+        <div class="editor-label">
+             Potência Eléctrica KVA:
+           <!-- @Html.LabelFor(model => model.MPotenciaKVA)-->
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.MPotenciaKVA)
+            @Html.ValidationMessageFor(model => model.MPotenciaKVA)
+        </div>
+        <br />
+        <div class="editor-label">
+            Refência do Geraway:
+           <!-- @Html.LabelFor(model => model.MGerawayRef)-->
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.MGerawayRef)
+            @Html.ValidationMessageFor(model => model.MGerawayRef)
+        </div>
+        <br />
+        <div class="editor-label">
+             Geraway Número: 
+            <!--@Html.LabelFor(model => model.MGerawayNumber)-->
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.MGerawayNumber)
+            @Html.ValidationMessageFor(model => model.MGerawayNumber)
+        </div>
+        <br />
+        <div class="editor-label">
+             Horas de funciomanto:
+            <!--@Html.LabelFor(model => model.Horrasuncionamento)-->
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.Horrasuncionamento)
+            @Html.ValidationMessageFor(model => model.Horrasuncionamento)
+        </div>
+        <br />
+        <br />
+          <div class="editor-label">
+           Data de conclusão:
+           <!-- @Html.LabelFor(model => model.DataConcliusao)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DataConcliusao)
+            @Html.ValidationMessageFor(model => model.DataConcliusao)
+        </div>
+        <div class="editor-label">
+               Código da Requisição:
+            <!--@Html.LabelFor(model => model.MCodigoRequisicao)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MCodigoRequisicao)
+            @Html.ValidationMessageFor(model => model.MCodigoRequisicao)
+        </div>
+            <div class="editor-label">
+               Número de horas de trabalho:
+            <!--@Html.LabelFor(model => model.MHorasEstimadas)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MHorasEstimadas)
+            @Html.ValidationMessageFor(model => model.MHorasEstimadas)
+        </div>
+        <br />
+        <div class="editor-label">
+            <!--@Html.LabelFor(model => model.MTipoDeTarefa)-->
+        </div>
+        <div class="editor-field">
+            <!--@Html.EditorFor(model => model.MTipoDeTarefa)-->
+           <!-- @Html.ValidationMessageFor(model => model.MTipoDeTarefa)-->
+             @Html.DropDownList("MTipoDeTarefa", new SelectList(ViewBag.Categoriademanutencao, "ID", "Descricao"), "-- Tipo de trabalho--")
+        </div>
+
+        <div class="editor-label">
+            <!--@Html.LabelFor(model => model.MFuncionarioResp)-->
+        </div>
+        <div class="editor-field">
+               <!-- @Html.EditorFor(model => model.RESPONSAVEL_ID)-->
+               <!-- @Html.ValidationMessageFor(model => model.RESPONSAVEL_ID)-->
+             @Html.DropDownList("RESPONSAVEL_ID", new SelectList(ViewBag.ChefeEquipa, "ID", "NomeCompleto"), "--Chefe de Equipa--")
+        </div>
+
+        <div class="editor-label">
+               <!-- @Html.LabelFor(model => model.Mecanico_ID)-->
+        </div>
+        <div class="editor-field">
+            <!--@Html.EditorFor(model => model.Mecanico_ID)-->
+             <!-- @Html.ValidationMessageFor(model => model.Mecanico_ID)-->
+            @Html.DropDownList("Mecanico_ID", new SelectList(ViewBag.FMecanico, "ID", "NomeCompleto"), "--Mecânico--")
+        </div>
+        <div class="editor-label">
+            <!--@Html.LabelFor(model => model.Electricista_ID)-->
+        </div>
+        <div class="editor-field">
+            <!--@Html.EditorFor(model => model.Electricista_ID)-->
+            <!-- @Html.ValidationMessageFor(model => model.Electricista_ID)-->
+             @Html.DropDownList("Electricista_ID", new SelectList(ViewBag.FElectricista, "ID", "NomeCompleto"), "--Electricista--")
+        </div>
+
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.Motorista_ID)-->
+        </div>
+        <div class="editor-field">
+            <!--@Html.EditorFor(model => model.Motorista_ID)-->
+            <!--@Html.ValidationMessageFor(model => model.Motorista_ID)-->
+                @Html.DropDownList("Motorista_ID", new SelectList(ViewBag.FMotorista, "ID", "NomeCompleto"), "--Motorista--")
+        </div>
+        <br />
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.Id_MesProximaManutencao)-->
+        </div>
+        <div class="editor-field">
+           <!-- @Html.EditorFor(model => model.Id_MesProximaManutencao)-->
+           <!-- @Html.ValidationMessageFor(model => model.Id_MesProximaManutencao)-->
+            <select id="Id_MesProximaManutencao" name="Id_MesProximaManutencao"><option value="">-- Próxima Manutenção--</option>
+                <option value="1"> Janeiro</option>
+                <option value="2"> Fevereiro  </option>
+                <option value="3"> Março      </option>
+                <option value="4"> Abril      </option>
+                <option value="5"> Maio       </option>
+                <option value="6"> Junho      </option>
+                <option value="7"> Julio      </option>
+                <option value="8">  Agosto     </option>
+                <option value="9"> Setembro   </option>
+                <option value="10"> Outubro   </option>
+                <option value="11"> Novembro  </option>
+                <option value="12"> Dezembro  </option>
+          </select>
+        </div>
+        <br />
+        <p>
+            <input type="submit" value="Guardar & Sair" />
+        </p>
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

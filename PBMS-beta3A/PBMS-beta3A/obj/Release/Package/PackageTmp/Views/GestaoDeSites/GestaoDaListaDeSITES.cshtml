@@ -1,0 +1,74 @@
+﻿@model IEnumerable<PBMS_beta3A.Model.ListaDeSITES>
+
+@{
+    ViewBag.Title = "GestaoDaListaDeSITES";
+}
+
+<!------------------------------------------------------------JavaScript código------------------------------------------>
+<script type="text/javascript">
+
+    function GestaoDeSites() {
+
+        var get    = document.getElementById("site_info");
+        var estado = get.options[get.selectedIndex].value;
+        
+        $.ajax({
+            type: 'GET', url: '/GestaoDeSites/SitesRequisitados',
+            dataType: 'html',
+            cache: false,
+            async: true,
+            data: { site: estado },
+            success: function (data)
+            { $('#ResultadoDaPesquisa').html(data); }
+
+    });
+
+
+    }
+   
+</script>
+
+<!------------------------------------------------------------HTML---------------------------------------------------------->
+
+<h2>Informação dos Sites</h2>
+
+<div id="historico" name="gerador" value="">
+
+ <div name="estado" id="divsite" value="ver_sites" >
+    <br />
+       <select id="site_info" name="tipo" >
+
+        <option value="3" selected="selected">   Online           </option>
+        <option value="6">                       Desligados       </option>
+        <option value="2">                       Instalados       </option>
+        <option value="14">                      Em Teste 24h     </option>
+        <option value="5">                       Avariado         </option>
+        <option value="4">                       Em Manutenção    </option>
+        <option value="1">                       Stock            </option>
+        <option value="12">                      Descontinuados   </option>
+        </select>
+   
+    <input type="button" id="gestao" name="gerador" value="Pesquisar" onclick="GestaoDeSites()" />
+ </div>
+</div>
+
+<p>
+  @Html.ActionLink("Configurar Novo Site", "CriarNovoSite")
+  <br />
+ @* @Html.ActionLink("Ver Próximas Manutencoes", "Manutencao")   *@
+  <br />
+  @Html.ActionLink("Ver Próximas Manutencoes", "ProximasManutencoes")
+</p>
+
+<p3> 
+
+ <div id="ResultadoDaPesquisa">
+    @{
+        Html.RenderPartial("SitesRequisitados");
+    }
+
+</div>
+
+</p3> 
+
+

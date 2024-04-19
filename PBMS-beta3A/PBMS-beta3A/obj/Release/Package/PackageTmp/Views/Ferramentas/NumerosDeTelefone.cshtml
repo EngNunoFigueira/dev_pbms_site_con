@@ -1,0 +1,73 @@
+﻿@model IEnumerable<PBMS_beta3A.Model.ListaDeSimCard>
+
+@{
+    ViewBag.Title = "NumerosDeTelefone";
+}
+<br />
+<h2>Gestão das comunicações GSM</h2>
+<br />
+
+<script type="text/javascript">
+
+    function GestaoSimCards() {
+
+        /*-------------------------------------------Lê quais das 4 opções o utilizador seleccionou---------------------*/
+
+        var opcao = null;
+
+        if (document.getElementById("SimcardOnline").checked == true) {
+            opcao = document.getElementById("SimcardOnline").value;
+        }
+
+        if (document.getElementById("SimcardEmStock").checked == true) {
+            opcao = document.getElementById("SimcardEmStock").value;
+        }
+
+        if (document.getElementById("SimcardDesligados").checked == true) {
+            opcao = document.getElementById("SimcardDesligados").value;
+        }
+        if (document.getElementById("SimcardEmTeste24").checked == true) {
+            opcao = document.getElementById("SimcardEmTeste24").value;
+        }
+        /*----------------------------------------------------------END----------------------------------------------------*/
+
+        /*------------------Lê a opção que foi solicitada e faz o metódo AJAX para devolver o HTML------------------------*/
+
+        $.ajax({
+            type: 'GET', url: '/Ferramentas/SimCardConsultas',
+            dataType: 'html',
+            cache: false,
+            async: true,
+            data: { operacao: opcao },
+            success: function (data)
+            { $('#ResultadoDaPesquisa').html(data); }
+        });
+    }
+
+</script>
+
+<!-----------------------------------------------código javascript----------------------------------------------->
+
+<!-----------------------------------------------Código HTML DA VISTA--------------------------------------------->
+<br />
+<div>
+    @Html.ActionLink("clica para registar novo Sim Card", "RegistarNumeroTelefone")
+</div>
+
+<div id="historico" name="gerador" value="">
+
+ <form name="Historico do Gerador" id="historico_gerador" value="hgerador"method="GET" action="SimCardConsultas" >
+    <br />
+    <input type="radio"   id="SimcardOnline"                name="opcao"    value="3" />          Online 
+    <input type="radio"   id="SimcardEmStock"               name="opcao"    value="1" checked/>   Em Stock 
+    <input type="radio"   id="SimcardDesligados"            name="opcao"    value="6" />          Desligados
+    <input type="radio"   id="SimcardEmTeste24"             name="opcao"    value="14" />         Em Teste 24 
+
+    <input type="button"  id="gestao"                  name="gerador"  value="Pesquisar" onclick="GestaoSimCards()" />
+ </form>
+</div>
+
+ <div id="ResultadoDaPesquisa">
+ @{ 
+     @@Html.RenderPartial("SimCardConsultas");
+  }   

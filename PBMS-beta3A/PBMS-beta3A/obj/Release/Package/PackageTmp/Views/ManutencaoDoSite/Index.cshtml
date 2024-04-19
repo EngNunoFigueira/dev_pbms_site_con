@@ -1,0 +1,188 @@
+﻿@model PBMS_beta3A.Model.ManutencaoSite
+
+@{
+    ViewBag.Title = "Registo da Última Manutenção do SITE";
+}
+
+<h2>Registo da Última Manutenção do SITE</h2>
+<br />
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>ManutencaoDoSite</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NomeDoSite)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NomeDoSite)
+            @Html.ValidationMessageFor(model => model.NomeDoSite)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Provincia)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Provincia)
+            @Html.ValidationMessageFor(model => model.Provincia)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Municipio)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Municipio)
+            @Html.ValidationMessageFor(model => model.Municipio)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MarcaDoGerador)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MarcaDoGerador)
+            @Html.ValidationMessageFor(model => model.MarcaDoGerador)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PotenciaElectricaKVA)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PotenciaElectricaKVA)
+            @Html.ValidationMessageFor(model => model.PotenciaElectricaKVA)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NumeroDeSerieDoMotor)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NumeroDeSerieDoMotor)
+            @Html.ValidationMessageFor(model => model.NumeroDeSerieDoMotor)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NumeroDeSerieDoGerador)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NumeroDeSerieDoGerador)
+            @Html.ValidationMessageFor(model => model.NumeroDeSerieDoGerador)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NumeroDeSerieDoAlternador)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NumeroDeSerieDoAlternador)
+            @Html.ValidationMessageFor(model => model.NumeroDeSerieDoAlternador)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DataDaManutencao)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DataDaManutencao)
+            @Html.ValidationMessageFor(model => model.DataDaManutencao)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HorasDeFuncionamentoGerador)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HorasDeFuncionamentoGerador)
+            @Html.ValidationMessageFor(model => model.HorasDeFuncionamentoGerador)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NomeDaEmpresaCliente)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NomeDaEmpresaCliente)
+            @Html.ValidationMessageFor(model => model.NomeDaEmpresaCliente)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ContactoTelefoneCliente)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ContactoTelefoneCliente)
+            @Html.ValidationMessageFor(model => model.ContactoTelefoneCliente)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NomeResponsavelCliente)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NomeResponsavelCliente)
+            @Html.ValidationMessageFor(model => model.NomeResponsavelCliente)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ContactoEmailDoCliente)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ContactoEmailDoCliente)
+            @Html.ValidationMessageFor(model => model.ContactoEmailDoCliente)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TrocaDoOleoDoMotor)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TrocaDoOleoDoMotor)
+            @Html.ValidationMessageFor(model => model.TrocaDoOleoDoMotor)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TrocaDeFiltroDeAr)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TrocaDeFiltroDeAr)
+            @Html.ValidationMessageFor(model => model.TrocaDeFiltroDeAr)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TrocaDeFiltroDeOleo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TrocaDeFiltroDeOleo)
+            @Html.ValidationMessageFor(model => model.TrocaDeFiltroDeOleo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TrocaDeFiltroDeGasoleo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TrocaDeFiltroDeGasoleo)
+            @Html.ValidationMessageFor(model => model.TrocaDeFiltroDeGasoleo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.GerawayStatusOk)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GerawayStatusOk)
+            @Html.ValidationMessageFor(model => model.GerawayStatusOk)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.GerawayUltimoSaldo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GerawayUltimoSaldo)
+            @Html.ValidationMessageFor(model => model.GerawayUltimoSaldo)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,92 @@
+﻿@model PBMS_beta3A.Model.RegistarSimCard
+
+@{
+    ViewBag.Title = "Registar Numero Telefone";
+}
+
+<h2> GSM Card</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Registo de Sim Cards</legend>
+
+        <div class="editor-label">
+          <!--  @Html.LabelFor(model => model.Operadora) -->
+        </div>
+        <div class="editor-field">
+          <!--  @Html.EditorFor(model => model.Operadora) -->
+          <!--  @Html.ValidationMessageFor(model => model.Operadora) -->
+
+          <div class="editor-field">
+          <select id="Operadora" name="Operadora"><option value="">--Operadora --</option>
+          <option value="1">  Unitel   </option>
+          <option value="2">  Movicel  </option>
+          <option value="3">  Orange   </option>
+          <option value="4">  Vodafone </option>
+          <option value="5">  Optimus  </option>
+          <option value="6">  Movistar </option>
+          </select>
+          </div>
+        </div>     
+         <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.DataDaCompra)-->
+           data de entrada
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DataDaCompra)
+            @Html.ValidationMessageFor(model => model.DataDaCompra)
+        </div>  
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.Status_Referencia) -->
+        </div>
+        <div class="editor-field">
+           <!-- @Html.EditorFor(model => model.Status_Referencia) -->
+           <!-- @Html.ValidationMessageFor(model => model.Status_Referencia) -->
+
+            @Html.DropDownList("Status_Referencia", new SelectList(ViewBag.OpcoesDeEstado, "ID", "Descricao"), "-- Selecciona o Estado--")
+        </div>                                                  
+        <div class="editor-label">
+            <!--@Html.LabelFor(model => model.PinCode)-->
+            código Pin
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PinCode)
+            @Html.ValidationMessageFor(model => model.PinCode)
+        </div>
+         <br />
+        <div class="editor-label">
+            <!--@Html.LabelFor(model => model.Puk_1)-->
+            primeiro Puk1
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Puk_1)
+            @Html.ValidationMessageFor(model => model.Puk_1)
+        </div>
+         <br />
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.Puk_2)-->
+           segundo Puk2
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Puk_2)
+            @Html.ValidationMessageFor(model => model.Puk_2)
+        </div>
+        <br />
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.Numero)-->
+           número
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Numero)
+            @Html.ValidationMessageFor(model => model.Numero)
+        </div>
+        <p>
+            <input type="submit" value="Guardar & Sair" />
+        </p>
+    </fieldset>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

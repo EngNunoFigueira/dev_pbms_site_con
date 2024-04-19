@@ -1,0 +1,138 @@
+﻿@model IEnumerable<PBMS_beta3A.Model.GeradorElectrico>
+
+<table>
+ <tr>
+        <th>
+          Marca
+         </th>
+         <th>
+          Modelo
+         </th>
+         <th>
+          Fabricante
+         </th>
+         <th>
+          Ano
+         </th>
+         <th>
+          KVA
+         </th>
+        <th>
+         Nr.Fases 
+        </th>
+        <th>
+         Arranque
+        </th>
+        <th>
+         Combustível
+        </th>
+         <th>
+         Ltr
+        </th>
+        <th>
+         Hr
+        </th>
+        <th>
+         CTRL 
+        </th>
+         <th>
+         Can
+        </th>
+        <th>
+         Modbus
+        </th>
+        <th>
+          dB
+        </th>
+         <th>
+          Cmp
+        </th>
+        <th>
+          Altura
+        </th>
+		<th>
+          Largura
+        </th>
+        <th>
+         Kg
+        </th>
+        <th>
+          Estado
+         </th>
+          <th>
+          Actualizar
+        </th>
+         <th>
+          Histórico
+        </th>
+    </tr>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+          @Html.DisplayFor(modelItem => item.Marca)
+        </td>
+
+         <td>
+            @Html.DisplayFor(modelItem => item.GeradorModelo)
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.GeradorFabricante)
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.GeradorAnoDeFabrico)
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.GeradorPotenciaKVA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GeradorNumeroDeFases)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GeradorTipoDeArranque)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GeradorTipoCombustivel)
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.CapacidadeEmLitros)
+        </td>
+          <td>
+            @Html.DisplayFor(modelItem => item.HorasDeFuncionamento)
+        </td>
+          <td>
+            @Html.DisplayFor(modelItem => item.GeradorprogramadorLocal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GeradorProtocoloCAN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GeradorProtocoloModbus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RuidoEmDb)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dimensao_C)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dimensao_H)
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.Dimensao_L)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dimensao_kg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+         <td>
+            @Html.ActionLink("Actualizar", "ActualizarGerador", new { id = item.ID }) 
+        </td>
+         <td>
+            @Html.ActionLink("Consultar", "HistoricoDoGerador", new { id=item.ID }) 
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="MyDbContext-Web.config Connection String" description="MyDbContext Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:nundeldbserver.database.windows.net,1433;Data Source=nundeldbserver.database.windows.net;Initial Catalog=MyDbContext;Persist Security Info=False;User ID={nuno};Password={cazenga_st48$};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Nuno\ Figueira\\documents\\visual\ studio\ 2010\\Projects\\PBMS-beta3A\\PBMS-beta3A\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MyDbContext']/@connectionString" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="DefaultConnection_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Nuno\ Figueira\\documents\\visual\ studio\ 2010\\Projects\\PBMS-beta3A\\PBMS-beta3A\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="MyDbContext_DatabasePublish-Web.config Connection String" description="MyDbContext_DatabasePublish Connection String used in web.config by the application to access the database." defaultValue="MyDbContext_DatabasePublish.ConnetionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Nuno\ Figueira\\documents\\visual\ studio\ 2010\\Projects\\PBMS-beta3A\\PBMS-beta3A\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MyDbContext_DatabasePublish']/@connectionString" />
+  </parameter>
+</parameters>

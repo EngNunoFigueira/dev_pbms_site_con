@@ -1,0 +1,120 @@
+﻿@model IEnumerable<PBMS_beta3A.Model.GeradorElectrico>
+
+@{
+    ViewBag.Title = "MostraListaDeGeradores";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+       
+    });
+ 
+</script>
+
+<script type="text/javascript">
+
+    function AjaxCall() {
+
+        var id = "12";
+
+        $.ajax({
+            url: '/GestaoDeGeradores/HistoricoDoGerador',
+            type: "GET",
+            layout: null,
+            data: { nombre: id },
+            success: function (data) {
+                //var res = data;
+                //alert(data);
+            }
+        });
+
+    }
+</script>
+
+<script type="text/javascript">
+
+    function GestaoGerador() {
+
+        /*-------------------------------------------Lê quais das 4 opções o utilizador seleccionou---------------------*/
+
+        var opcao = null;
+
+        if (document.getElementById("geradores_Online").checked == true) {
+            opcao = document.getElementById("geradores_Online").value;
+        }
+        if (document.getElementById("geradores_instalados").checked == true) {
+            opcao = document.getElementById("geradores_instalados").value;
+        }
+        if (document.getElementById("geradores_EmManutenção").checked == true) {
+            opcao = document.getElementById("geradores_EmManutenção").value;
+        }
+        if (document.getElementById("geradores_em_AVenda").checked == true) {
+            opcao = document.getElementById("geradores_em_AVenda").value;
+        }
+
+
+        if (document.getElementById("geradores_em_Avariados").checked == true) {
+            opcao = document.getElementById("geradores_em_Avariados").value;
+        }
+        if (document.getElementById("geradores_abatidos").checked == true) {
+            opcao = document.getElementById("geradores_abatidos").value;
+        }
+        if (document.getElementById("geradores_Destruídos").checked == true) {
+            opcao = document.getElementById("geradores_Destruídos").value;
+        }
+        if (document.getElementById("geradores_Desligados").checked == true) {
+            opcao = document.getElementById("geradores_Desligados").value;
+        }
+        if (document.getElementById("geradores_em_Particulares").checked == true) {
+            opcao = document.getElementById("geradores_em_Particulares").value;
+        }
+      
+        /*----------------------------------------------------------END----------------------------------------------------*/
+
+        /*------------------Lê a opção que foi solicitada e faz o metódo AJAX para devolver o HTML------------------------*/
+
+        $.ajax({
+            type: 'GET', url: '/GestaoDeGeradores/EstadoDoGerador',
+            dataType: 'html',
+            cache: false,
+            async: true,
+            data: { operacao: opcao },
+            success: function (data)
+            { $('#ResultadoDaPesquisa').html(data); }
+        });
+    }
+
+</script>
+
+<!-----------------------------------------------código javascript----------------------------------------------->
+
+<!-----------------------------------------------Código HTML DA VISTA--------------------------------------------->
+
+<h2>Máquinas</h2>
+<br />
+<div>
+    @Html.ActionLink("clica para registar novo gerador", "GestaoDeGeradores")
+</div>
+
+<div id="historico" name="gerador" value="">
+
+ <form name="Historico do Gerador" id="historico_gerador" value="hgerador"method="GET" action="HistoricoDoGerador" >
+    <br />
+     <input type="radio"  id="geradores_Online"             name="opcao"    value="3" />          Online 
+    <input  type="radio"   id="geradores_instalados"        name="opcao"    value="2" checked/>   Instalados 
+    <input  type="radio"   id="geradores_EmManutenção"      name="opcao"    value="4" />          Em Manutenção 
+    <input type="radio"   id="geradores_em_AVenda"          name="opcao"    value="7" />          A Venda 
+    <input type="radio"   id="geradores_em_Avariados"       name="opcao"    value="5" />          Avariados
+     <input type="radio"  id="geradores_abatidos"           name="opcao"    value="8" />          Abatidos 
+    <input type="radio"   id="geradores_Destruídos"         name="opcao"    value="10"/>          Destruídos 
+    <input type="radio"   id="geradores_Desligados"         name="opcao"    value="6" />          Desligados 
+    <input type="radio"   id="geradores_em_Particulares"    name="opcao"    value="9" />          Particulares
+
+    <input type="button"  id="gestao"                 name="gerador"  value="Pesquisar" onclick="GestaoGerador()" />
+ </form>
+</div>
+
+ <div id="ResultadoDaPesquisa">
+ @{ 
+     @@Html.RenderPartial("EstadoDoGerador");
+  }

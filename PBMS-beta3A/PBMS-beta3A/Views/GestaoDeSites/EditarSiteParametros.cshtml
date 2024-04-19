@@ -1,0 +1,130 @@
+﻿@model PBMS_beta3A.Model.ListaDeSITES
+
+@{
+    ViewBag.Title = "EditarSiteParametros";
+}
+      
+<script src="/Scripts/jquery-1.11.2.js"></script>
+<script src="/Scripts/jquery-1.7.1.js"></script>
+<script src="/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script src="/Scripts/jquery.validate.js"></script>
+<script src="/Scripts/jquery.validate.unobtrusive.js"></script>
+
+
+
+<h2>Actualização de Parametros</h2>
+
+<form action="/GestaoDeSites/EditarSiteParametros/1" method="post">    <fieldset>
+         <legend>Ficha Técnica</legend>
+
+        <div class="editor-label">
+            <label for="SITEDataInstalacao">instalado</label>
+        </div>
+        <div class="editor-field">
+            <input class="text-box single-line" data-val="true" data-val-date="The field SITEDataInstalacao must be a date." data-val-required="The SITEDataInstalacao field is required." id="SITEDataInstalacao" name="SITEDataInstalacao" type="datetime" value="04-04-2016 00:00:00" readonly/>
+            <span class="field-validation-valid" data-valmsg-for="SITEDataInstalacao" data-valmsg-replace="true"></span>
+        </div>
+
+        <div class="editor-label">
+            <label for="SITENome">site</label>
+        </div>
+        <div class="editor-field">
+            <input class="text-box single-line" id="SITENome" name="SITENome" type="text" value="Kizomba" readonly/>
+            <span class="field-validation-valid" data-valmsg-for="SITENome" data-valmsg-replace="true"></span>
+        </div>
+
+        <div class="editor-label">
+            <label for="SITENomeCliente">cliente</label>
+        </div>
+        <div class="editor-field">
+            <input class="text-box single-line" id="SITENomeCliente" name="SITENomeCliente" type="text" value="Figueira" readonly/>
+            <span class="field-validation-valid" data-valmsg-for="SITENomeCliente" data-valmsg-replace="true"></span>
+        </div>
+
+        <div class="editor-label">
+            <label for="SITEProvincia">província</label>
+        </div>
+        <div class="editor-field">
+            <input class="text-box single-line" id="SITEProvincia" name="SITEProvincia" type="text" value="Lunda Norte" readonly/>
+            <span class="field-validation-valid" data-valmsg-for="SITEProvincia" data-valmsg-replace="true"></span>
+        </div>
+
+        <div class="editor-label">
+            <label for="SITEMunicipio">munícipio</label>
+        </div>
+        <div class="editor-field">
+            <input class="text-box single-line" id="SITEMunicipio" name="SITEMunicipio" type="text" value="Capenda-Camulemba" readonly/>
+            <span class="field-validation-valid" data-valmsg-for="SITEMunicipio" data-valmsg-replace="true"></span>
+        </div>
+
+         <div class="editor-label">
+            <label for="SITEBairro">bairro</label>
+        </div>
+        <div class="editor-field">
+            <input class="text-box single-line" id="SITEBairro" name="SITEBairro" type="text" value="" />
+            <span class="field-validation-valid" data-valmsg-for="SITEBairro" data-valmsg-replace="true"></span>
+        </div>
+
+        <div class="editor-label">
+            <label for="SITEGRWYPartNumber">geraway</label>
+        </div>
+        <div class="editor-field">
+            <input class="text-box single-line" id="SITEGRWYPartNumber" name="SITEGRWYPartNumber" type="text" value="GRW20BCA14L" />
+            <span class="field-validation-valid" data-valmsg-for="SITEGRWYPartNumber" data-valmsg-replace="true"></span>
+        </div>
+
+        <div class="editor-label">
+            <label for="SITEContactoMobile">número</label>
+        </div>
+        <div class="editor-field">
+            <input class="text-box single-line" id="SITEContactoMobile" name="SITEContactoMobile" type="text" value="923406070" />
+            <span class="field-validation-valid" data-valmsg-for="SITEContactoMobile" data-valmsg-replace="true"></span>
+        </div>
+
+        <div class="editor-label">
+            <label for="SITEGRDORKVA">potência eléctrica kva</label>
+        </div>
+        <div class="editor-field">
+            <input class="text-box single-line" data-val="true" data-val-number="The field SITEGRDORKVA must be a number." data-val-required="The SITEGRDORKVA field is required." id="SITEGRDORKVA" name="SITEGRDORKVA" type="text" value="45" />
+            <span class="field-validation-valid" data-valmsg-for="SITEGRDORKVA" data-valmsg-replace="true"></span>
+        </div>
+
+        <div class="editor-label">
+            <label for="SITEEstadoOnOff">estado actual</label>
+        </div>
+        <div class="editor-field">
+            <input class="text-box single-line" id="SITEEstadoOnOff" name="SITEEstadoOnOff" type="text" value="Em Teste 24h" />
+            <span class="field-validation-valid" data-valmsg-for="SITEEstadoOnOff" data-valmsg-replace="true"></span>
+        </div>
+
+        <div class="editor-label">
+            <label for="SITEEstadoDescricao">classe</label>
+        </div>
+        <div class="editor-field">
+            <input class="text-box single-line" id="SITEEstadoDescricao" name="SITEEstadoDescricao" type="text" value="" />
+            <span class="field-validation-valid" data-valmsg-for="SITEEstadoDescricao" data-valmsg-replace="true"></span>
+        </div>
+
+        
+        <div class="editor-label">
+            <label for="SITERTiposeferencia">tipo de site</label>
+        </div>
+        <div class="editor-field">
+            <input class="text-box single-line" id="SITERTiposeferencia" name="SITERTiposeferencia" type="text" value="Electrógeneos" readonly/>
+            <span class="field-validation-valid" data-valmsg-for="SITERTiposeferencia" data-valmsg-replace="true"></span>
+        </div>
+
+         <div class="editor-label">
+            <label for="NomeDoMesDaProximaManutencao"> próxima manutenção</label>
+        </div>
+        <div class="editor-field">
+            <input class="text-box single-line" id="NomeDoMesDaProximaManutencao" name="NomeDoMesDaProximaManutencao" type="text" value="Julho" />
+            <span class="field-validation-valid" data-valmsg-for="NomeDoMesDaProximaManutencao" data-valmsg-replace="true"></span>
+        </div>
+
+         <p>
+            <input type="submit" value="Guardar actualizações" />
+        </p>
+    </fieldset>
+</form>
+

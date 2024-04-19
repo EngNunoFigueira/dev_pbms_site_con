@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Beta-PBMS" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Nuno\ Figueira\\documents\\visual\ studio\ 2010\\Projects\\PBMS-beta3A\\PBMS-beta3A\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Nuno\ Figueira\\documents\\visual\ studio\ 2010\\Projects\\PBMS-beta3A\\PBMS-beta3A\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=tcp:nundeldbserver.database.windows.net,1433;Initial Catalog=MyDbContext;User Id=nuno@nundeldbserver.database.windows.net;Password=cazenga-st48$" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Nuno\ Figueira\\documents\\visual\ studio\ 2010\\Projects\\PBMS-beta3A\\PBMS-beta3A\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="MyDbContext-Web.config Connection String" description="" value="Data Source=tcp:nundeldbserver.database.windows.net,1433;Initial Catalog=MyDbContext;User Id=nuno@nundeldbserver.database.windows.net;Password=cazenga-st48$" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Nuno\ Figueira\\documents\\visual\ studio\ 2010\\Projects\\PBMS-beta3A\\PBMS-beta3A\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MyDbContext']/@connectionString" />
+  </parameter>
+</parameters>

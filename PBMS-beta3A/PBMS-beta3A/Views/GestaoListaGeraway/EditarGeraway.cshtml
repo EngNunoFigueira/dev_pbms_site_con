@@ -1,0 +1,155 @@
+﻿@model PBMS_beta3A.Model._Geraway
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EditarGeraway</title>
+</head>
+<body>
+    <script src="~/Scripts/jquery-1.7.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    
+    @using (Html.BeginForm()) {
+        @Html.ValidationSummary(true)
+    
+        <fieldset>
+            <legend>Actualizações</legend>
+    
+            @Html.HiddenFor(model => model.ID)
+    
+            <div class="editor-label">
+               Modelo: <!--@Html.LabelFor(model => model.modelo)-->
+            </div>
+            <div class="editor-field">
+                @Html.DisplayFor(model => model.modelo)
+                @Html.ValidationMessageFor(model => model.modelo)
+            </div>
+             <br />
+            <div class="editor-label">
+                 Versão do Firmware
+               <!--@Html.LabelFor(model => model.firmware_version) -->
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.firmware_version)
+                @Html.ValidationMessageFor(model => model.firmware_version)
+            </div>
+            <div class="editor-label">
+                Número de Série:
+              <!--  @Html.LabelFor(model => model.serial_number) -->
+            </div>
+            <div class="editor-field">
+                @Html.DisplayFor(model => model.serial_number)
+                @Html.ValidationMessageFor(model => model.serial_number)
+            </div>
+            <br />
+            <div class="editor-label">
+              PartNumber:
+              <!-- @Html.LabelFor(model => model.part_number) -->
+            </div>
+            <div class="editor-field">
+                @Html.DisplayFor(model => model.part_number)
+                @Html.ValidationMessageFor(model => model.part_number)
+            </div>
+            <br />
+            <div class="editor-label">
+                @Html.LabelFor(model => model.n_sensore_I)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.n_sensore_I)
+                @Html.ValidationMessageFor(model => model.n_sensore_I)
+            </div>
+    
+            <div class="editor-label">
+                @Html.LabelFor(model => model.n_sensores_V)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.n_sensores_V)
+                @Html.ValidationMessageFor(model => model.n_sensores_V)
+            </div>
+    
+            <div class="editor-label">
+                @Html.LabelFor(model => model.n_sensores_P)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.n_sensores_P)
+                @Html.ValidationMessageFor(model => model.n_sensores_P)
+            </div>
+    
+            <div class="editor-label">
+                @Html.LabelFor(model => model.n_sensores_T)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.n_sensores_T)
+                @Html.ValidationMessageFor(model => model.n_sensores_T)
+            </div>
+    
+            <div class="editor-label">
+                @Html.LabelFor(model => model.n_sensores_F)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.n_sensores_F)
+                @Html.ValidationMessageFor(model => model.n_sensores_F)
+            </div>
+    
+            <div class="editor-label">
+                @Html.LabelFor(model => model.n_sensores_N)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.n_sensores_N)
+                @Html.ValidationMessageFor(model => model.n_sensores_N)
+            </div>
+            <br />
+            <div class="editor-label">
+                 Referência da Motherboard:
+                <!--@Html.LabelFor(model => model.tipo_M_T_B) -->
+            </div>
+            <div class="editor-field">
+                @Html.DisplayFor(model => model.tipo_M_T_B)
+                @Html.ValidationMessageFor(model => model.tipo_M_T_B)
+            </div>
+    <br />
+            <div class="editor-label">
+                @Html.LabelFor(model => model.PCB_version)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.PCB_version)
+                @Html.ValidationMessageFor(model => model.PCB_version)
+            </div>
+            <br />
+             <div class="editor-label">
+                Estado Actual do Equipamento: 
+              <!--@Html.LabelFor(model => model.DescricaoDoEstado) -->
+            </div>
+            <div class="editor-field">
+                @Html.DisplayFor(model => model.DescricaoDoEstado) 
+                @Html.ValidationMessageFor(model => model.DescricaoDoEstado) 
+            </div>
+            <br />
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Estado)
+            </div>
+            <div class="editor-field">
+               <!-- @Html.EditorFor(model => model.Estado) -->
+               <!-- @Html.ValidationMessageFor(model => model.Estado) -->
+
+                <select id="Estado" name="Estado"><option value="">-- Novo Estado --</option>
+                <option value="1">  Stock         </option>
+                <option value="3">  Online        </option>
+                <option value="14"> Em Teste 24h  </option>
+                <option value="4">  Em Manutenção </option>
+                <option value="5">  Avariado      </option>
+                <option value="13"> Perdido       </option>
+                </select>
+            </div>
+             <br />
+            <p>
+                <input type="submit" value="Guardar actualizações" />
+            </p>
+        </fieldset>
+    }
+    
+</body>
+</html>

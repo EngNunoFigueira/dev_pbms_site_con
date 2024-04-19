@@ -1,0 +1,177 @@
+﻿@model PBMS_beta3A.Model._Geraway
+
+@{
+    ViewBag.Title = "InserirNovoGeraway";
+}
+
+<h2>Geraway</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Ficha Técnica</legend>
+
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.modelo) -->
+               Modelo
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.modelo)
+            @Html.ValidationMessageFor(model => model.modelo)
+        </div>
+        <div class="editor-label">
+           <!--@Html.LabelFor(model => model.serial_number)-->
+             Número de Série
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.serial_number)
+            @Html.ValidationMessageFor(model => model.serial_number)
+        </div>
+
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.part_number)-->
+           Parte Number
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.part_number)
+            @Html.ValidationMessageFor(model => model.part_number)
+        </div>
+           <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.tipo_M_T_B)-->
+             Referência
+        </div>
+        <div class="editor-field">
+             @Html.EditorFor(model => model.tipo_M_T_B)
+             @Html.ValidationMessageFor(model => model.tipo_M_T_B)
+        </div>
+
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.PCB_version)-->
+            Versão do Hardware
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PCB_version)
+            @Html.ValidationMessageFor(model => model.PCB_version)
+        </div>
+        <br />
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.firmware_version)-->
+        </div>
+        <div class="editor-field">
+           <!-- @Html.EditorFor(model => model.firmware_version)-->
+           <!-- @Html.ValidationMessageFor(model => model.firmware_version)-->
+            <select id="firmware_version" name="firmware_version"><option value="">Versão do Firmware</option>
+            <option value="1"> 1  </option>
+            <option value="2"> 2  </option>
+            <option value="3"> 3  </option>
+            <option value="4"> 4  </option>
+            <option value="5"> 5 </option>
+            <option value="6"> 6 </option>
+            </select>
+        </div>
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.n_sensore_I)-->
+        </div>
+        <div class="editor-field">
+            <!-- @Html.EditorFor(model => model.n_sensore_I)-->
+            <!--@Html.ValidationMessageFor(model => model.n_sensore_I)-->
+            <select id="n_sensore_I" name="n_sensore_I"><option value="">Sensores de Corrente</option>
+            <option value="1"> 1  </option>
+            <option value="2"> 2  </option>
+            <option value="3"> 3  </option>
+            <option value="4"> 4  </option>
+            <option value="5"> 5 </option>
+            <option value="6"> 6 </option>
+            </select>
+        </div>
+
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.n_sensores_V)-->
+        </div>
+        <div class="editor-field">
+           <!-- @Html.EditorFor(model => model.n_sensores_V)-->
+           <!-- @Html.ValidationMessageFor(model => model.n_sensores_V)-->
+            <select id="n_sensores_V" name="n_sensores_V"><option value="">Sensores de Tensão --</option>
+            <option value="1"> 1  </option>
+            <option value="2"> 2  </option>
+            <option value="3"> 3  </option>
+            <option value="4"> 4  </option>
+            <option value="5"> 5 </option>
+            <option value="6"> 6 </option>
+            <option value="6"> 8 </option>
+            </select>
+        </div>
+
+        <div class="editor-label">
+            <!--@Html.LabelFor(model => model.n_sensores_P)-->
+        </div>
+        <div class="editor-field">
+            <!--@Html.EditorFor(model => model.n_sensores_P)-->
+            <!--@Html.ValidationMessageFor(model => model.n_sensores_P)-->
+            <select id="n_sensores_P" name="n_sensores_P"><option value="">Sensores de Pressão</option>
+            <option value="1"> 1  </option>
+            <option value="2"> 2  </option>
+            <option value="3"> 3  </option>
+            <option value="4"> 4  </option>
+            <option value="5"> 5 </option>
+            <option value="6"> 6 </option>
+            </select>
+        </div>
+
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.n_sensores_T)--
+        </div>
+        <div class="editor-field">
+           <!-- @Html.EditorFor(model => model.n_sensores_T)-->
+           <!-- @Html.ValidationMessageFor(model => model.n_sensores_T)-->
+             <select id="n_sensores_T" name="n_sensores_T"><option value="">Sensores de Temperatura</option>
+            <option value="1"> 1  </option>
+            <option value="2"> 2  </option>
+            <option value="3"> 3  </option>
+            <option value="4"> 4  </option>
+            <option value="5"> 5 </option>
+            <option value="6"> 6 </option>
+            </select>
+        </div>
+
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.n_sensores_F)-->
+        </div>
+        <div class="editor-field">
+           <!-- @Html.EditorFor(model => model.n_sensores_F)-->
+           <!-- @Html.ValidationMessageFor(model => model.n_sensores_F)-->
+            <select id="n_sensores_F" name="n_sensores_F"><option value="">Sensores de Frequência</option>
+            <option value="1"> 1  </option>
+            <option value="2"> 2  </option>
+            <option value="3"> 3  </option>
+            <option value="4"> 4  </option>
+            <option value="5"> 5 </option>
+            <option value="6"> 6 </option>
+            </select>
+        </div>
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.Estado) -->
+        </div>
+        <div class="editor-field">
+           <!-- @Html.EditorFor(model => model.Estado) -->
+           <!--  @Html.ValidationMessageFor(model => model.Estado) -->
+           <div class="editor-field">
+
+      <select id="Estado" name="Estado"><option value="">-- selecciona o estado do geraway --</option>
+      <option value="1">   Stock        </option>
+      <option value="14">  Em Teste 24h </option>
+      </select>
+      </div>
+           
+      </div>
+
+        <p>
+            <input type="submit" value="Guardar & Sair" />
+        </p>
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,90 @@
+﻿@model PBMS_beta3A.Model.RequisitarMaterial
+
+@{
+    ViewBag.Title = "RequisitarMaterial";
+}
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Descrição do pedido</legend>
+
+        @Html.HiddenFor(model => model.ID)
+
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.Data)-->
+        </div>
+        <div class="editor-field">
+            <!-- @Html.EditorFor(model => model.Data)-->
+            <!--@Html.ValidationMessageFor(model => model.Data)-->
+        </div>
+         <div class="editor-label">
+                Nome do Responsável: 
+          <!-- @Html.LabelFor(model => model.RespNome)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.RespNome)
+            @Html.ValidationMessageFor(model => model.RespNome)
+        </div>
+         <div class="editor-label">
+                Apelido
+              <!--@Html.LabelFor(model => model.RespApelido)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.RespApelido)
+            @Html.ValidationMessageFor(model => model.RespApelido)
+        </div>
+        <div class="editor-label">
+                   Telemovel
+               <!--@Html.LabelFor(model => model.ResTelemovel)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ResTelemovel)
+            @Html.ValidationMessageFor(model => model.ResTelemovel)
+        </div>
+        <div class="editor-label">
+                 Email
+              <!--@Html.LabelFor(model => model.ResEmail)-->
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ResEmail)
+            @Html.ValidationMessageFor(model => model.ResEmail)
+        </div>
+
+
+        <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.DescricaoDoEstado)-->
+        </div>
+        <div class="editor-field">
+           <!-- @Html.EditorFor(model => model.DescricaoDoEstado)-->
+           <!-- @Html.ValidationMessageFor(model => model.DescricaoDoEstado)-->
+        </div>
+        <div class="editor-label">
+             Apresentação do pedido:
+           <!-- @Html.LabelFor(model => model.Material)-->
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.Material)
+            @Html.ValidationMessageFor(model => model.Material)
+        </div>
+         <div class="editor-label">
+           <!-- @Html.LabelFor(model => model.Id_Estado)-->
+        </div>
+        <div class="editor-field">
+           <!-- @Html.EditorFor(model => model.Id_Estado)-->
+           <!-- @Html.ValidationMessageFor(model => model.Id_Estado)-->
+                <select id="Id_Estado" name="Id_Estado"><option value="">--Tipo de Requisição--</option>
+                <option value="17">  Normal </option>
+                <option value="18"> Urgente </option>
+                </select>
+        </div>
+        <p>
+            <input type="submit" value="Guardar & Sair" />
+        </p>
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

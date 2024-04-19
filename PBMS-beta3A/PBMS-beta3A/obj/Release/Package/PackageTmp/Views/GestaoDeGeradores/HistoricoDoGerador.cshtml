@@ -1,0 +1,196 @@
+﻿@model IEnumerable<PBMS_beta3A.Model.HistoricoDoGerador>
+
+@{
+    ViewBag.Title = "HistoricoDoGerador";
+}
+
+<script type="text/javascript">
+
+    function msg() {
+        $(document).ready(function () {
+            alert("Ocorreu um erro ao tentar submeter os dados");
+        });
+    }
+</script>
+
+<script type="text/javascript">
+
+    function estilo() {
+        $(document).ready(function () {
+
+            $("#SucessoDive").css("Display", "block")
+        });
+    }
+
+</script>
+
+<script type="text/javascript">
+</script>
+
+<script type="text/javascript">
+
+    function AjaxCall() {
+
+        var ID = "12";
+
+//        $.ajax({
+//            url: '/GestaoDeGeradores/HistoricoDoGerador',
+//            type: "POST",
+//            data: {nombre: ID },
+//            success: function (data) {},
+//            beforeSend: 
+//            }
+//        });
+
+
+$.ajax({
+  method: "POST",
+  url: "/GestaoDeGeradores/HistoricoDoGerador",
+  data: { name: "John" }
+})
+  .done(function( msg ) {
+    alert( "Data Saved: " + msg );
+  });
+
+    }
+</script>
+
+
+<h2>Histórico Técnico do Gerador</h2>
+<br />
+ <input type="button" name="Submeter para Abate" id="ajax" value="Submeter para Abate" onclick="AjaxCall()"/>
+<div id="tabela">
+<table>
+    <tr>
+         <th>
+          Data de Instalação
+         </th>
+        <th>
+            Data da Manutenção
+        </th>
+        <th>
+            Hrs Funcionamento 
+        </th>
+		<th>
+            Manutenção
+        </th>
+        <th>
+            Estado 
+        </th>
+        <th>
+           Téc.Nome
+        </th>
+        <th>
+            Téc.Apelido 
+        </th>
+		<th>
+           Peça Substituida:
+        </th>
+        <th>
+        </th>
+        <th>
+        </th>
+        <th>   
+        </th>
+        <th> 
+        </th>
+        <th>   
+        </th>
+        <th>
+        </th>
+        <th> 
+        </th>
+        <th>  
+        </th>
+        <th>
+        </th>
+        <th>
+        </th>
+        <th>
+        </th>
+        <th>
+        </th>
+        <th>
+        </th>
+        <th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataDaInstalacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataDaManutencao)
+        </td>
+        <td>
+             @Html.DisplayFor(modelItem => item.HorasDeFuncionamento)
+        </td>
+        <td>
+           @Html.DisplayFor(modelItem => item.MotivoDaManutencao)
+        </td>
+         <td>
+           @Html.DisplayFor(modelItem => item.TipoDeAvarias)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeDoTecnicoResponsavel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApelidoDoTecnicoResponsavel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Obs_Material_01)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Obs_Material_02)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Obs_Material_03)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Obs_Material_04)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Obs_Material_05)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Obs_Material_06)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Obs_Material_07)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Obs_Material_08)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Obs_Material_09)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Obs_Material_10)
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.Obs_Material_10)
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.Obs_Material_10)
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.Obs_Material_10)
+        </td>
+          <td>
+            @Html.DisplayFor(modelItem => item.Obs_Material_10)
+        </td>
+        <td>
+        </td>
+        <td>
+           @* @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+        </td>
+    </tr>
+}
+</table>
+</div>
+
+

@@ -1,0 +1,60 @@
+﻿@model IEnumerable<PBMS_beta3A.Model.CrearFichaDeCliente>
+
+@{
+    ViewBag.Title = "ListaDeClientes";
+}
+
+<h2>Clientes</h2>
+
+<br />
+
+<script type="text/javascript">
+
+    function GestaoClientes() {
+
+        /*-------------------------------------------Lê quais das 4 opções o utilizador seleccionou---------------------*/
+
+        var opcao = null;
+
+        if (document.getElementById("Particulares").checked == true) {
+            opcao = document.getElementById("Particulares").value;
+        }
+        if (document.getElementById("Empresas").checked == true) {
+            opcao = document.getElementById("Empresas").value;
+        }
+
+        /*----------------------------------------------------------END----------------------------------------------------*/
+
+        /*------------------Lê a opção que foi solicitada e faz o metódo AJAX para devolver o HTML------------------------*/
+
+        $.ajax({
+            type: 'GET', url: '/RHFuncionario/ActualizaAListaDeClientes',
+            dataType: 'html', 
+            cache: false,
+            async: true,
+            data: { operacao: opcao },
+            success: function (data)
+            { $('#ResultadoDaPesquisa').html(data); }
+        });
+    }
+
+</script>
+
+<!-----------------------------------------------código javascript----------------------------------------------->
+
+<!-----------------------------------------------Código HTML DA VISTA--------------------------------------------->
+<br />
+
+<div id="Clientes">
+    <input type="radio"   id="Particulares"           name="opcao"    value="4" />          Particulares 
+    <input type="radio"   id="Empresas"               name="opcao"    value="5" checked/>   Empresas 
+    <input type="button"  id="GestaoClientes"         name="GestaoClientes"  value="Pesquisar" onclick="GestaoClientes()" />
+</div>
+
+ <div id="ResultadoDaPesquisa">
+ @{ 
+     @@Html.RenderPartial("ActualizaAListaDeClientes");
+  }
+  </div>
+
+
